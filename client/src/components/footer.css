@@ -14,6 +14,7 @@
 .mainCont2 p {
     font-size: 1.8vh;
     letter-spacing: 1.52px;
+    padding:0;
 }
 
 @media screen and (max-width: 980px){

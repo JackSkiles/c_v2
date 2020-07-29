@@ -1,0 +1,15 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.form {
+    align-items: center;
+    justify-items: center;
+    margin: 21.45vh;
+}
+
+.button, .password {
+    display: block;
+    padding: 2vh;
+}

@@ -50,7 +50,36 @@ export default function Header() {
                     <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components" ><h3 className="text">About Us</h3>
                     </Dropdown.Toggle>
                     <Dropdown.Menu className="dropMenu">
-                        <Dropdown.Item><Link to="/" className="link2"><h3 className="text">BELIEFS</h3></Link></Dropdown.Item>
+                        {/* BELIEFS */}
+                        <Dropdown.Item className="dropdown-item">
+                            <Link to="/" className="link2">
+                                <h3 className="text">BELIEFS</h3>
+                            </Link>
+                        </Dropdown.Item>
+                        {/* Elders */}
+                        <Dropdown.Item className="dropdown-item">
+                            <Link to="/" className="link2">
+                                <h3 className="text">ELDERS</h3>
+                            </Link>
+                        </Dropdown.Item>
+                        {/* HISTORY */}
+                        <Dropdown.Item className="dropdown-item">
+                            <Link to="/" className="link2">
+                                <h3 className="text">HISTORY</h3>
+                            </Link>
+                        </Dropdown.Item>
+                        {/* FAQS */}
+                        <Dropdown.Item className="dropdown-item">
+                            <Link to="/" className="link2">
+                                <h3 className="text">FAQS</h3>
+                            </Link>
+                        </Dropdown.Item>
+                        {/* LOG IN */}
+                        <Dropdown.Item className="dropdown-item">
+                            <Link to="/login" className="link2">
+                                <h3 className="text">LOG IN</h3>
+                            </Link>
+                        </Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
                 <Link className="link"><Button className="contact" variant="light"><h3>Contact Us</h3></Button></Link>

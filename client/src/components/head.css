@@ -45,6 +45,12 @@
 .link2 {
     text-decoration: none;
     color: rgb(88, 88, 88);
+
+}
+
+.link2:hover {
+    text-decoration: none;
+    color:rgb(88, 88, 88);
 }
 
 .header {

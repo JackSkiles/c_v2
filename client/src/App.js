@@ -7,6 +7,10 @@ import Home from './components/Home';
 import Services from './components/Services';
 import Footer from './components/Footer'
 import firebase from './firebase'
+
+import TimesList from './components/times-list'
+import AddTimeEntryForm from './components/add-time-entry-form'
+import LogIn from './components/LogIn'
 import {storage} from './firebase';
 
 
@@ -33,6 +37,7 @@ class App extends Component {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/services" exact component={Services} /> 
+            <Route path="/login" exact component={LogIn} />
           </Switch>
           <Footer />
         </Router>
@@ -40,5 +45,6 @@ class App extends Component {
     )
   }
   }
+
 
 export default App;
