@@ -1,0 +1,42 @@
+.imgCont {
+    height: 25vh;
+    overflow: hidden;
+}
+
+.topImg {
+    width: 100%;
+}
+
+.mainCont {
+    display: flex;
+    padding-top: 5vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1.52px;
+}
+
+.textCont {
+    width: 40%;
+    padding: 3vh;
+}
+
+.textCont2 {
+    display: flex;
+    justify-content: flex-start;
+    text-align: start;
+    flex-wrap: wrap;
+    padding: 3vh;
+    width: 40%;
+    padding-top: 3vh;
+}
+
+.textBox {
+    display: block;
+}
+
+@media screen and (max-width: 980px){
+    .textCont, .textCont2 {
+        width: 95%;
+    }
+}

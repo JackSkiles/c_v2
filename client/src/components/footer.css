@@ -1,0 +1,23 @@
+.mainBox {
+    background-color: rgb(27, 27, 27);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+.mainCont2 {
+   width: 35%;
+   color: honeydew;
+}
+
+.mainCont2 p {
+    font-size: 1.8vh;
+    letter-spacing: 1.52px;
+}
+
+@media screen and (max-width: 980px){
+    .mainCont2 {
+        width: 60%;
+    }
+}

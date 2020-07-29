@@ -1,0 +1,54 @@
+.main {
+    position: relative;
+}
+
+.cIItem {
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+    align-items: center;
+    overflow: hidden;
+}
+
+#img {
+    height: 80vh;
+}
+
+
+.theMap{ 
+    margin: 7vh 0 7vh 0;
+    width: 60%; 
+    height: 55vh;
+} 
+
+.mapDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeText {
+    margin-top: 10vh;
+    font-size: 2rem;
+    width: 75%;
+    letter-spacing: 1.52px;
+} 
+
+.homeText p {
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 980px){
+    .homeText {
+        font-size: 1.5rem;
+        width: 85%
+    }
+    .homeText p {
+        font-size: 1rem;
+    }
+    .theMap{
+        width: 90%;
+        height: 45vh
+    }
+}
