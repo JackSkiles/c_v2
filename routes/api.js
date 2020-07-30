@@ -13,7 +13,12 @@ const checkAuth = require('../auth/checkAuthentication');
 //             res.json(data)
 //         })
 // })
-
+router.get('/user', checkAuth, function (req, res, next) {
+    db.User.findByPk(req.session.user.id)
+        .then(data => {
+            res.json(data)
+        })
+})
 // router.post('/', function (req, res) {
 //     console.log(req.body)
 //     const { password } = req.body
@@ -31,11 +36,9 @@ const checkAuth = require('../auth/checkAuthentication');
 // });
 router.post('/login', (req, res) => {
     const password = req.body.password;
-    console.log(req)
-    db.User.findOne({ where: { id: 3 } })
+    db.User.findOne({ where: { id: 4 } })
         .then((User) => {
             bcrypt.compare(password, User.password, (err, match) => {
-                console.log(err, match)
                 if (err) {
                     res.status(500)
                         .json({ error: 'Incorrect Password' })
@@ -54,6 +57,13 @@ router.post('/login', (req, res) => {
             res.status(401)
                 .json({ error: 'Username not found' })
         })
+})
+
+router.get('/sermons', checkAuth, (req, res) => {
+    db.Sermon.findAll()
+    .then((data) => {
+        res.json(data);
+    })
 })
 
 
