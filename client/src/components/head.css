@@ -2,7 +2,7 @@
 .contain {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(39, 38, 38);
+    background: rgb(27, 27, 27);
     height: 12vh;
     font-family: 22px scheme;
     text-transform: uppercase;
@@ -14,11 +14,15 @@
     align-items: center;
     text-align: start;
     padding-left: 2%;
-    width: 25%;
+    width: 30%;
     font-weight: 400;
     font-style: normal;
     font-size: 85%;
     letter-spacing: 1.52px;
+}
+
+.link1:hover {
+    text-decoration:none;
 }
 
 .headers {
@@ -42,10 +46,15 @@
     text-decoration: none;
     color: #fff8f0;
 }
+
+.link:hover {
+    text-decoration: none;
+    color: #fff8f0;
+}
+
 .link2 {
     text-decoration: none;
     color: rgb(88, 88, 88);
-
 }
 
 .link2:hover {
@@ -57,8 +66,18 @@
     font-size: 3vh;
 }
 
+.header:hover {
+    text-decoration: none;
+    color:#fff8f0;
+}
+
 .text {
-    font-size: 2.5vh;
+    font-size: 2.75vh;
+    text-decoration: none;
+}
+
+.text:hover {
+    font-size: 3.25vh;
 }
 
 .drop {

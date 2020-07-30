@@ -13,7 +13,7 @@ export default function Header() {
                 e.preventDefault();
                 onClick(e);
             }}
-            style={{ color: "#fff8f0" }}
+            style={{ color: "#fff8f0", textDecoration: "none"}}
         >
             {children}
         </a>
@@ -47,7 +47,7 @@ export default function Header() {
                 <Link to="/" className="link"><h3 className="text">Home</h3></Link>
                 <Link to="/services" className="link"><h3 className="text">Services</h3></Link>
                 <Dropdown className="link">
-                    <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components" ><h3 className="text">About Us</h3>
+                    <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components"><h3 className="text">About Us</h3>
                     </Dropdown.Toggle>
                     <Dropdown.Menu className="dropMenu">
                         {/* BELIEFS */}
