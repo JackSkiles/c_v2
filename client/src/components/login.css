@@ -3,6 +3,41 @@
     margin: 0;
 }
 
+.mainDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainDiv2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.subDiv {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 60%;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .5vh;
+    height: 30%;
+    width: 30%;
+}
+
+.items {
+    margin-top: 2vh;
+}
+
 .form {
     align-items: center;
     justify-items: center;

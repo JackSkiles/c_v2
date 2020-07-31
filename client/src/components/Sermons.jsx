@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Redirect, Link, withRouter } from 'react-router-dom'
 import { storage } from '../firebase';
+import './login.css';
 
 export default class Sermons extends Component {
     constructor(props) {
@@ -39,32 +40,28 @@ export default class Sermons extends Component {
             //     console.log(this.state.urls)
             // })
     }
-    // getSermon = (name) => {
-    //     storage.ref('sermons').child(`${name}.mp3`).getDownloadURL().then(url => {
-    //         this.setState({ urls: url });
-    //     })
-    //     return console.log('done')
-    // }
     render() {
         return (
-            <div>
-                {this.state.redirect ? <Redirect to='/login' /> : null}
-                {this.state.sermons.map(sermon => {
-                    const url = `https://firebasestorage.googleapis.com/v0/b/church-284323.appspot.com/o/sermons%2F${sermon.url}.mp3?alt=media&token=365b7d51-2ef6-4b1f-aa89-b5a70d8a1f1d`
-                    // this.setState({ index: this.state.index + 1 })
-                    return (
-                        <div key={sermon.id} >
-                            <h1>{sermon.elder}</h1>
-                            <div>
-                                <iframe src={url}></iframe>
-                                {/* <a href={url}>{sermon.url}</a> */}
-                            </div>
-                        </div>
-                    )
-                })}
-                <div>
-                    <Link to="/directory"><h2>Directory</h2></Link>
+            <div className="mainDiv">
+                <h2>Sermon List</h2>
+                <div className="mainDiv2">
+                    <div className="subDiv">
+                        {this.state.redirect ? <Redirect to='/login' /> : null}
+                        {this.state.sermons.map(sermon => {
+                            const url = `https://firebasestorage.googleapis.com/v0/b/church-284323.appspot.com/o/sermons%2F${sermon.url}.mp3?alt=media&token=365b7d51-2ef6-4b1f-aa89-b5a70d8a1f1d`
+                            const date = sermon.createdAt.slice(0, 10)
+                            // this.setState({ index: this.state.index + 1 })
+                            return (
+                                <div className="card" key={sermon.id} >
+                                    <p className="items"><a href={url} target="_blank">{sermon.elder} {date}</a></p>
+                                </div>
+                            )
+                        })}
+                    </div>
                 </div>
+                    <div>
+                        <Link to="/directory"><h2>Directory</h2></Link>
+                    </div>
             </div>
         )
     }
