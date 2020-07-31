@@ -56,7 +56,8 @@ export default class Sermons extends Component {
                         <div key={sermon.id} >
                             <h1>{sermon.elder}</h1>
                             <div>
-                                <a href={url}>{sermon.url}</a>
+                                <iframe src={url}></iframe>
+                                {/* <a href={url}>{sermon.url}</a> */}
                             </div>
                         </div>
                     )
