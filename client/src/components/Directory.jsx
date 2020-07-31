@@ -1,23 +1,54 @@
-import React, { useState, useEffect } from 'react'
-import { Redirect, withRouter } from 'react-router-dom'
+import React, { Component } from 'react';
+import { Redirect, Link, withRouter } from 'react-router-dom'
+import axios from 'axios'
 
-export default function Directory() {
-    const [redirect, setPath] = useState(false)
-    useEffect = () => {
+export default class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            redirect: false,
+            directory: []
+        }
+    }
+
+    componentDidMount = () => {
         fetch(`/api/v1/user`)
             .then(res =>
                 res.json()
             )
             .then(data => {
-                console.log(data)
                 if (data === 'Logged Out') {
-                    setPath(true)
+                    this.setState({ redirect: true })
                 }
-            });
+            }).then(() => {
+                fetch('/api/v1/directory')
+                    .then(res => res.json()
+                    )
+                    .then(data => {
+                        console.log(data)
+                        this.setState({ directory: data })
+                    })
+            })
     }
-    return (
-        <div>
-            {redirect ? <Redirect to='/directory' /> : null }
-        </div>
-    )
+    render() {
+        return (
+            <div>
+                {this.state.redirect ? <Redirect to='/login' /> : null}
+                {this.state.directory.map(member => {
+                    return (
+                        <div key={member.id} >
+                            <h1>{member.firstName} {member.lastName}</h1>
+                            <div>
+                                <p>{member.phone} {member.email}</p>
+                                <p>{member.address}</p>
+                            </div>
+                        </div>
+                    )
+                })}
+                <div>
+                    <Link to="/sermons"><h2>Sermons</h2></Link>
+                </div>
+            </div>
+        )
+    }
 }

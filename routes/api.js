@@ -7,18 +7,26 @@ const Op = db.Sequelize.Op
 // const secret = "mysecretshhh";
 const checkAuth = require('../auth/checkAuthentication');
 
-// router.get('/user', function (req, res, next) {
-//     db.User.findByPk(req.body.id)
-//         .then(data => {
-//             res.json(data)
-//         })
-// })
 router.get('/user', checkAuth, function (req, res, next) {
     db.User.findByPk(req.session.user.id)
         .then(data => {
             res.json(data)
         })
 })
+
+router.get('/directory', checkAuth, function(req, res, next) {
+    db.Directory.findAll(
+    ).then((data) => {
+      res.json(data);
+    }); 
+  });
+  
+router.get('/sermons', checkAuth, function(req, res, next) {
+    db.Sermon.findAll(
+    ).then((data) => {
+      res.json(data);
+    }); 
+  });
 // router.post('/', function (req, res) {
 //     console.log(req.body)
 //     const { password } = req.body

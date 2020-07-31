@@ -8,7 +8,7 @@ import Footer from './components/Footer'
 import LogIn from './components/LogIn'
 import {storage} from './firebase';
 import Directory from './components/Directory';
-
+import Sermons from './components/Sermons';
 
 class App extends Component {
   constructor(props) {
@@ -34,6 +34,7 @@ class App extends Component {
             <Route path="/" exact component={Home} />
             <Route path="/services" exact component={Services} />
             <Route path="/directory" exact component={Directory}/> 
+            <Route path="/sermons" exact component={Sermons}/>
             <Route path="/login" exact component={LogIn} />
           </Switch>
           <Footer />
