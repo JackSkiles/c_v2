@@ -44,7 +44,7 @@ router.get('/sermons', checkAuth, function(req, res, next) {
 // });
 router.post('/login', (req, res) => {
     const password = req.body.password;
-    db.User.findOne({ where: { id: 4 } })
+    db.User.findOne({ where: { id: 1 } })
         .then((User) => {
             bcrypt.compare(password, User.password, (err, match) => {
                 if (err) {
