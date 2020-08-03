@@ -9,6 +9,7 @@ import LogIn from './components/LogIn'
 import {storage} from './firebase';
 import Directory from './components/Directory';
 import Sermons from './components/Sermons';
+import Register from './components/register';
 
 class App extends Component {
   constructor(props) {
@@ -32,6 +33,7 @@ class App extends Component {
           <Header />
           <Switch>
             <Route path="/" exact component={Home} />
+            <Route path="/register" exact component={Register} />
             <Route path="/services" exact component={Services} />
             <Route path="/directory" exact component={Directory}/> 
             <Route path="/sermons" exact component={Sermons}/>

@@ -27,21 +27,21 @@ router.get('/sermons', checkAuth, function(req, res, next) {
       res.json(data);
     }); 
   });
-// router.post('/', function (req, res) {
-//     console.log(req.body)
-//     const { password } = req.body
+router.post('/', function (req, res) {
+    console.log(req.body)
+    const { password } = req.body
    
-//     if (!password) { res.status(400).json({ error: 'password field is required' }); }
-//     bcrypt.hash(password, 10, (err, hash) => {
-//         db.User.create({
-//             password: hash,
-//         })
-//             .then(user => {
-//                 req.session.user = user;
-//                 res.status(201).json(user);
-//             })
-//     });
-// });
+    if (!password) { res.status(400).json({ error: 'password field is required' }); }
+    bcrypt.hash(password, 10, (err, hash) => {
+        db.User.create({
+            password: hash,
+        })
+            .then(user => {
+                req.session.user = user;
+                res.status(201).json(user);
+            })
+    });
+});
 router.post('/login', (req, res) => {
     const password = req.body.password;
     db.User.findOne({ where: { id: 1 } })
