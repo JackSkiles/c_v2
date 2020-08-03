@@ -21,7 +21,7 @@ export default function Home() {
                             className="d-block w-100"
                             id="img"
                             src="../chapter274.png"
-                            alt="Third slide"
+                            alt="Third slide" 
                         />
                         <Carousel.Caption>
                             <h3>Second slide label</h3>
