@@ -20,7 +20,7 @@ export default function Home() {
                         <img
                             className="d-block w-100"
                             id="img"
-                            src="../chapter_274.png"
+                            src="../chapter274.png"
                             alt="Third slide"
                         />
                         <Carousel.Caption>
@@ -32,7 +32,7 @@ export default function Home() {
                         <img
                             className="d-block w-100"
                             id="img"
-                            src="../chapter_357.png"
+                            src="../chapter357.png"
                             alt="Third slide"
                         />
                         <Carousel.Caption>
@@ -44,7 +44,7 @@ export default function Home() {
                         <img
                             className="d-block w-100"
                             id="img"
-                            src="../chapter_391.png"
+                            src="../chapter391.png"
                             alt="Third slide"
                         />
                         <Carousel.Caption>
@@ -56,7 +56,7 @@ export default function Home() {
                         <img
                             className="d-block w-100"
                             id="img"
-                            src="../chapter_439.png"
+                            src="../chapter439.png"
                             alt="Third slide"
                         />
                         <Carousel.Caption>
@@ -68,7 +68,7 @@ export default function Home() {
                         <img
                             className="d-block w-100"
                             id="img"
-                            src="../chapter_503.png"
+                            src="../chapter503.png"
                             alt="Third slide"
                         />
                         <Carousel.Caption>
@@ -80,7 +80,7 @@ export default function Home() {
                         <img
                             className="d-block w-100"
                             id="img"
-                            src="../chapter_532.png"
+                            src="../chapter532.png"
                             alt="Third slide"
                         />
                         <Carousel.Caption>
@@ -92,7 +92,7 @@ export default function Home() {
                         <img
                             className="d-block w-100"
                             id="img"
-                            src="../chapter_685.png"
+                            src="../chapter685.png"
                             alt="Third slide"
                         />
                         <Carousel.Caption>
@@ -104,7 +104,7 @@ export default function Home() {
                         <img
                             className="d-block w-100"
                             id="img"
-                            src="../chapter_699.png"
+                            src="../chapter699.png"
                             alt="Third slide"
                         />
                         <Carousel.Caption>
