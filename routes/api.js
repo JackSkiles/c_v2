@@ -44,7 +44,32 @@ router.post('/', function (req, res) {
 });
 router.post('/login', (req, res) => {
     const password = req.body.password;
-    db.User.findOne({ where: { id: 1 } })
+    db.User.findOne({ where: { id: 1 }})
+        .then((User) => {
+            bcrypt.compare(password, User.password, (err, match) => {
+                if (err) {
+                    res.status(500)
+                        .json({ error: 'Incorrect Password' })
+                } else if (!match) {
+                    res.status(401)
+                        .json({
+                            error: 'Incorrect email or password'
+                        })
+                } else {
+                    req.session.user = User;
+                    res.json(User)
+                }
+            })
+        })
+        .catch(() => {
+            res.status(401)
+                .json({ error: 'Username not found' })
+        })
+})
+
+router.post('/login/admin', (req, res) => {
+    const password = req.body.password;
+    db.User.findOne({ where: { id: 2 } || {id: 1}})
         .then((User) => {
             bcrypt.compare(password, User.password, (err, match) => {
                 if (err) {
