@@ -1,7 +1,8 @@
 {
   "name": "c_v2",
   "version": "0.0.0",
-  "private": true,
+  "description": "",
+  "main": "index.js",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "cookie-parser": "~1.4.4",
@@ -10,15 +11,13 @@
     "express": "^4.16.4",
     "express-session": "^1.17.1",
     "http-errors": "~1.6.3",
-    "jade": "~1.11.0",
-    "jsonwebtoken": "^8.5.1",
-    "morgan": "~1.9.1",
+    "morgan": "^1.9.1",
     "mysql2": "^2.1.0",
     "nodemon": "^2.0.4",
     "pg": "^8.3.0",
+    "save": "^2.4.0",
     "sequelize": "^6.3.3",
-    "sequelize-cli": "^6.2.0",
-    "socket.io": "^2.3.0"
+    "sequelize-cli": "^6.2.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -28,8 +27,6 @@
     "db:reset": "sequelize db:drop && sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
     "postinstall": "cd client && npm install && npm run build"
   },
-  "main": "app.js",
   "author": "",
-  "license": "ISC",
-  "description": ""
+  "license": "ISC"
 }
