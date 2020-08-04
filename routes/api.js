@@ -21,12 +21,13 @@ router.get('/directory', checkAuth, function(req, res, next) {
     }); 
   });
   
-router.get('/sermons', checkAuth, function(req, res, next) {
-    db.Sermon.findAll(
-    ).then((data) => {
-      res.json(data);
-    }); 
-  });
+  router.get('/sermons', checkAuth, (req, res) => {
+    db.Sermon.findAll()
+    .then((data) => {
+        res.json(data);
+    })
+})
+
 router.post('/', function (req, res) {
     console.log(req.body)
     const { password } = req.body
@@ -92,10 +93,10 @@ router.post('/login/admin', (req, res) => {
         })
 })
 
-router.get('/sermons', checkAuth, (req, res) => {
-    db.Sermon.findAll()
-    .then((data) => {
-        res.json(data);
+router.post('/sermons', (req, res) => {
+    db.Sermon.create({
+        elder: req.body.elder,
+        url: req.body.url
     })
 })
 
