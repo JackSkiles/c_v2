@@ -44,7 +44,7 @@ router.post('/', function (req, res) {
 });
 router.post('/login', (req, res) => {
     const password = req.body.password;
-    db.User.findOne({ where: { id: 2 } })
+    db.User.findOne({ where: { id: 1 } })
         .then((User) => {
             bcrypt.compare(password, User.password, (err, match) => {
                 if (err) {
