@@ -3,7 +3,9 @@ import axios from 'axios'
 import { Redirect, Link, withRouter } from 'react-router-dom'
 import { storage } from '../firebase';
 import './login.css';
+import { Button} from 'react-bootstrap'
 import Axios from 'axios';
+import './pages.css';
 
 export default class Upload extends Component {
     constructor(props) {
@@ -73,17 +75,20 @@ export default class Upload extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="main">
                 {this.state.redirect ? <Redirect to='/login' /> : null}
-                <br />
-                <div>
-                     <input type="file" onChange={this.handleChange} />
+                <div className="mainCont">
+                    <br />
+                    <div className="textCont">
+                        <input type="file" onChange={this.handleChange} />
+                    </div>
+                    <div className="textCont">
+                        <input onChange={this.myChangeHandler} />
+                    </div>
+                    <div className="textCont">
+                        <Button onClick={this.handleUpload}>Upload</Button>
+                    </div>
                 </div>
-                <div>
-                     <input onChange={this.myChangeHandler} />
-                </div>
-                <button onClick={this.handleUpload}>Upload</button>
-                <br />
             </div>
         )
     }
