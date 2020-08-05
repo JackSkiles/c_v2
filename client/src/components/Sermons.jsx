@@ -48,7 +48,7 @@ export default class Sermons extends Component {
                     <div className="subDiv">
                         {this.state.redirect ? <Redirect to='/login' /> : null}
                         {this.state.sermons.map(sermon => {
-                            const url = `https://firebasestorage.googleapis.com/v0/b/church-284323.appspot.com/o/sermons%2F${sermon.url}.mp3?alt=media&token=365b7d51-2ef6-4b1f-aa89-b5a70d8a1f1d`
+                            const url = `https://firebasestorage.googleapis.com/v0/b/church-284323.appspot.com/o/sermons%2F${sermon.url}?alt=media&token=365b7d51-2ef6-4b1f-aa89-b5a70d8a1f1d`
                             const date = sermon.createdAt.slice(0, 10)
                             // this.setState({ index: this.state.index + 1 })
                             return (

@@ -21,12 +21,13 @@ router.get('/directory', checkAuth, function(req, res, next) {
     }); 
   });
   
-router.get('/sermons', checkAuth, function(req, res, next) {
-    db.Sermon.findAll(
-    ).then((data) => {
-      res.json(data);
-    }); 
-  });
+  router.get('/sermons', checkAuth, (req, res) => {
+    db.Sermon.findAll()
+    .then((data) => {
+        res.json(data);
+    })
+})
+
 router.post('/', function (req, res) {
     console.log(req.body)
     const { password } = req.body
@@ -44,7 +45,7 @@ router.post('/', function (req, res) {
 });
 router.post('/login', (req, res) => {
     const password = req.body.password;
-    db.User.findOne({ where: { id: 1 } })
+    db.User.findOne({ where: { id: 1 }})
         .then((User) => {
             bcrypt.compare(password, User.password, (err, match) => {
                 if (err) {
@@ -67,11 +68,37 @@ router.post('/login', (req, res) => {
         })
 })
 
-router.get('/sermons', checkAuth, (req, res) => {
-    db.Sermon.findAll()
-    .then((data) => {
-        res.json(data);
+router.post('/login/admin', (req, res) => {
+    const password = req.body.password;
+    db.User.findOne({ where: { id: 2 } || {id: 1}})
+        .then((User) => {
+            bcrypt.compare(password, User.password, (err, match) => {
+                if (err) {
+                    res.status(500)
+                        .json({ error: 'Incorrect Password' })
+                } else if (!match) {
+                    res.status(401)
+                        .json({
+                            error: 'Incorrect email or password'
+                        })
+                } else {
+                    req.session.user = User;
+                    res.json(User)
+                }
+            })
+        })
+        .catch(() => {
+            res.status(401)
+                .json({ error: 'Username not found' })
+        })
+})
+
+router.post('/sermons', (req, res) => {
+    db.Sermon.create({
+        elder: req.body.elder,
+        url: req.body.url
     })
+    .then(data => res.json(data));
 })
 
 
