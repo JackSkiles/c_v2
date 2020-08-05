@@ -43,9 +43,9 @@ export default class Upload extends Component {
                 console.log(error);
             }
         )
-        Axios.post('api/v1/sermons/post',
+        Axios.post('api/v1/sermons',
                 {
-                    url: `${this.state.url.name}.mp3`,
+                    url: this.state.url.name,
                     elder: this.state.elder,
                     headers: {
                         'Content-Type': 'application/json;charset=UTF-8'

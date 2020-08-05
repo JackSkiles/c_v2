@@ -98,6 +98,7 @@ router.post('/sermons', (req, res) => {
         elder: req.body.elder,
         url: req.body.url
     })
+    .then(data => res.json(data));
 })
 
 
