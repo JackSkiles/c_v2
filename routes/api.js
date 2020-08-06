@@ -93,7 +93,7 @@ router.post('/login/admin', (req, res) => {
         })
 })
 
-router.post('/sermons', (req, res) => {
+router.post('/sermons', checkAuth, (req, res) => {
     db.Sermon.create({
         elder: req.body.elder,
         url: req.body.url
