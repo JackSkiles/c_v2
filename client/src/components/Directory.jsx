@@ -5,6 +5,7 @@ import './login.css'
 import BootstrapTable from 'react-bootstrap-table-next';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import * as ReactBootstrap from 'react-bootstrap';
+import Footer from './Footer'
 
 export default class App extends Component {
     constructor(props) {
@@ -43,7 +44,7 @@ export default class App extends Component {
             {dataField: "address"}
         ]
         return (
-            <div className="App">
+            <div className="mainDiv2">
                 {this.state.redirect ? <Redirect to='/login' /> : null}
                 <BootstrapTable
                     keyField="name"
@@ -51,6 +52,9 @@ export default class App extends Component {
                     columns={columns}
                     pagination={paginationFactory()}
                     />
+                <div>
+                    <Link to="/sermons"><h2>Sermons</h2></Link>
+                </div> 
                 {/* <h2>Directory</h2>
                 <div className="mainDiv2">
                     <div className="subDiv">
