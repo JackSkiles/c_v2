@@ -52,8 +52,8 @@ export default class Sermons extends Component {
                             const date = sermon.createdAt.slice(0, 10)
                             // this.setState({ index: this.state.index + 1 })
                             return (
-                                <div className="card" key={sermon.id} >
-                                    <p className="items"><a href={url} target="_blank">{sermon.elder} {date}</a></p>
+                                <div className="cards" key={sermon.id} >
+                                    <p className="paragraph"><a href={url} target="_blank"  className="items">{sermon.elder} {date}</a></p>
                                 </div>
                             )
                         })}
