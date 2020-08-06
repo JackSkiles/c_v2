@@ -101,5 +101,17 @@ router.post('/sermons', checkAuth, (req, res) => {
     .then(data => res.json(data));
 })
 
+router.post('/directory', (req, res) => {
+    const { firstName, lastName, email, phone, address } = req.body
+    db.Directory.create({
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phone: phone,
+        address: address
+    })
+    .then(data => res.json(data));
+})
+
 
 module.exports = router;
