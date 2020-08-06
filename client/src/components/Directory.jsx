@@ -39,7 +39,7 @@ export default class App extends Component {
                         {this.state.redirect ? <Redirect to='/login' /> : null}
                         {this.state.directory.map(member => {
                             return (
-                                <div key={member.id} className="cards">
+                                <div key={member.id} className="cards2">
                                     <p className="paragraph2">{member.firstName} {member.lastName}</p>
                                     <p className="paragraph2">{member.phone}</p>
                                     <p className="paragraph2">{member.email}</p>
@@ -47,6 +47,13 @@ export default class App extends Component {
                                 </div>
                             )
                         })}
+                    </div>
+                    <div class="pagination">
+                        <a href="#">&laquo;</a>
+                        <a href="#">1</a>
+                        <a class="active" href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">&raquo;</a>
                     </div>
                 </div>
                 <div>
