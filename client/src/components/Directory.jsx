@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Redirect, Link, withRouter } from 'react-router-dom'
 import axios from 'axios'
 import './login.css'
+import BootstrapTable from 'react-bootstrap-table-next';
+import paginationFactory from 'react-bootstrap-table2-paginator';
+import * as ReactBootstrap from 'react-bootstrap';
 
 export default class App extends Component {
     constructor(props) {
@@ -30,13 +33,27 @@ export default class App extends Component {
                     })
             })
     }
+
     render() {
+        const columns = [
+            {dataField: "firstName"},
+            {dataField: "lastName"},
+            {dataField: "phone"},
+            {dataField: "email"},
+            {dataField: "address"}
+        ]
         return (
-            <div className="mainDiv">
-                <h2>Directory</h2>
+            <div className="App">
+                {this.state.redirect ? <Redirect to='/login' /> : null}
+                <BootstrapTable
+                    keyField="name"
+                    data={this.state.directory}
+                    columns={columns}
+                    pagination={paginationFactory()}
+                    />
+                {/* <h2>Directory</h2>
                 <div className="mainDiv2">
                     <div className="subDiv">
-                        {this.state.redirect ? <Redirect to='/login' /> : null}
                         {this.state.directory.map(member => {
                             return (
                                 <div key={member.id} className="cards2">
@@ -58,7 +75,7 @@ export default class App extends Component {
                 </div>
                 <div>
                     <Link to="/sermons"><h2>Sermons</h2></Link>
-                </div>
+                </div> */}
             </div>
         )
     }
