@@ -53,7 +53,7 @@ export default class Sermons extends Component {
         ]
         const rowEvents = {
             onClick: (e, rows) => {
-                window.location.assign(rows.url)
+                window.location.assign(`https://firebasestorage.googleapis.com/v0/b/church-284323.appspot.com/o/sermons%2F${rows.url}?alt=media&token=365b7d51-2ef6-4b1f-aa89-b5a70d8a1f1d`)
             }
         }
         return (
@@ -69,22 +69,6 @@ export default class Sermons extends Component {
                         rowEvents={rowEvents}
                     />
                 </div>
-                {/* <div>
-                    <Link to="/sermons"><h2>Sermons</h2></Link>
-                </div>
-                <div className="subDiv">
-                    {this.state.redirect ? <Redirect to='/login' /> : null}
-                    {this.state.sermons.map(sermon => {
-                        const url = `https://firebasestorage.googleapis.com/v0/b/church-284323.appspot.com/o/sermons%2F${sermon.url}?alt=media&token=365b7d51-2ef6-4b1f-aa89-b5a70d8a1f1d`
-                        const date = sermon.createdAt.slice(0, 10)
-                        // this.setState({ index: this.state.index + 1 })
-                        return (
-                            <div className="cards" key={sermon.id} >
-                                <p className="paragraph"><a href={url} target="_blank" className="items">{sermon.elder} {date}</a></p>
-                            </div>
-                        )
-                    })}
-                </div> */}
                 <div>
                     <Link to="/directory"><h2>Directory</h2></Link>
                 </div>
