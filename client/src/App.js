@@ -43,7 +43,6 @@ class App extends Component {
             <Route path="/sermons" exact component={Sermons}/>
             <Route path="/login" exact component={LogIn} />
           </Switch>
-          <Footer />
         </Router>
       </div>
     )

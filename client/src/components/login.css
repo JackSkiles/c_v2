@@ -73,10 +73,18 @@
     padding: 2vh;
 }
 
+.tables {
+    width: 50%;
+    font-size: 1.7vh;
+}
+
+.texts {
+    width: 50%
+}
+
 
 @media screen and (max-width: 980px){
-    .cards{
-        height: 20%;
-        width: 50%;
+    .tables{
+        width: 100%;
     }
 }

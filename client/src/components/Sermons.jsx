@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Redirect, Link, withRouter } from 'react-router-dom'
 import { storage } from '../firebase';
 import './login.css';
+import Footer from './Footer'
 
 export default class Sermons extends Component {
     constructor(props) {
@@ -62,6 +63,7 @@ export default class Sermons extends Component {
                     <div>
                         <Link to="/directory"><h2>Directory</h2></Link>
                     </div>
+                    <Footer />
             </div>
         )
     }

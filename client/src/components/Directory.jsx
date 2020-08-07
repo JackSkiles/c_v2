@@ -37,49 +37,27 @@ export default class App extends Component {
 
     render() {
         const columns = [
-            {dataField: "firstName"},
-            {dataField: "lastName"},
-            {dataField: "phone"},
-            {dataField: "email"},
-            {dataField: "address"}
+            {dataField: "firstName", text: 'First Name'},
+            {dataField: "lastName", text: 'Last Name'},
+            {dataField: "phone", text: 'Phone Number'},
+            {dataField: "email", text: 'Email'},
+            {dataField: "address", text: 'Home Address'}
         ]
         return (
             <div className="mainDiv2">
                 {this.state.redirect ? <Redirect to='/login' /> : null}
-                <BootstrapTable
-                    keyField="name"
-                    data={this.state.directory}
-                    columns={columns}
-                    pagination={paginationFactory()}
-                    />
-                <div>
-                    <Link to="/sermons"><h2>Sermons</h2></Link>
-                </div> 
-                {/* <h2>Directory</h2>
-                <div className="mainDiv2">
-                    <div className="subDiv">
-                        {this.state.directory.map(member => {
-                            return (
-                                <div key={member.id} className="cards2">
-                                    <p className="paragraph2">{member.firstName} {member.lastName}</p>
-                                    <p className="paragraph2">{member.phone}</p>
-                                    <p className="paragraph2">{member.email}</p>
-                                    <p className="paragraph2">{member.address}</p>
-                                </div>
-                            )
-                        })}
-                    </div>
-                    <div class="pagination">
-                        <a href="#">&laquo;</a>
-                        <a href="#">1</a>
-                        <a class="active" href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">&raquo;</a>
-                    </div>
+                <div className="tables">
+                    <BootstrapTable 
+                        keyField="name"
+                        data={this.state.directory}
+                        columns={columns}
+                        pagination={paginationFactory()}
+                        />
                 </div>
                 <div>
                     <Link to="/sermons"><h2>Sermons</h2></Link>
-                </div> */}
+                </div>
+                <Footer />
             </div>
         )
     }
