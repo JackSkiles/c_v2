@@ -2,6 +2,7 @@ import React from 'react';
 import './home.css';
 import Carousel from 'react-bootstrap/Carousel';
 import Map from './Map'
+import Footer from './Footer'
 
 
 export default function Home() {
@@ -139,6 +140,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
