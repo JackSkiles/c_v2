@@ -2,7 +2,6 @@ import React from 'react';
 import './pages.css';
 import Footer from  './Footer'
 
-
 export default function Services() {
     return (
         <div className="main">
@@ -37,6 +36,7 @@ export default function Services() {
                            And don't worry if they wriggle or squawk - they'll fit right in.</p>
                 </div>
             </div>
+            <Footer />
         </div>
 
     )

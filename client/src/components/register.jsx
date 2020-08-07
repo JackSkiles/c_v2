@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Axios from 'axios';
 import Button from 'react-bootstrap/Button'
+import Footer from './Footer'
 
 export default class register extends Component {
     constructor(props) {
@@ -51,6 +52,7 @@ export default class register extends Component {
                 <p className="forgot-password text-right" style={{ padding: '20px'}}>
                 </p>
                 {/* end of registration form */}
+                <Footer />
             </div >
         );
     }

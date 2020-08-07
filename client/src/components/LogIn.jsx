@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './login.css';
 import { Redirect, withRouter } from 'react-router-dom'
 import axios from 'axios'
+import Footer from './Footer'
 
 export default function LogIn() {
     const [password, setPassword] = useState('')
@@ -40,6 +41,7 @@ export default function LogIn() {
                 </form>
             </div>
             )}
+            <Footer />
         </div>
     )
 }

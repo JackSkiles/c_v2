@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { Redirect, Link, withRouter } from 'react-router-dom'
 import axios from 'axios'
 import './login.css'
+import BootstrapTable from 'react-bootstrap-table-next';
+import paginationFactory from 'react-bootstrap-table2-paginator';
+import * as ReactBootstrap from 'react-bootstrap';
+import Footer from './Footer'
 
 export default class App extends Component {
     constructor(props) {
@@ -30,28 +34,30 @@ export default class App extends Component {
                     })
             })
     }
+
     render() {
+        const columns = [
+            {dataField: "firstName", text: 'First Name'},
+            {dataField: "lastName", text: 'Last Name'},
+            {dataField: "phone", text: 'Phone Number'},
+            {dataField: "email", text: 'Email'},
+            {dataField: "address", text: 'Home Address'}
+        ]
         return (
-            <div className="mainDiv">
-                <h2>Directory</h2>
-                <div className="mainDiv2">
-                    <div className="subDiv">
-                        {this.state.redirect ? <Redirect to='/login' /> : null}
-                        {this.state.directory.map(member => {
-                            return (
-                                <div key={member.id} className="cards">
-                                    <p className="paragraph2">{member.firstName} {member.lastName}</p>
-                                    <p className="paragraph2">{member.phone}</p>
-                                    <p className="paragraph2">{member.email}</p>
-                                    <p className="paragraph2">{member.address}</p>
-                                </div>
-                            )
-                        })}
-                    </div>
+            <div className="mainDiv2">
+                {this.state.redirect ? <Redirect to='/login' /> : null}
+                <div className="tables">
+                    <BootstrapTable 
+                        keyField="name"
+                        data={this.state.directory}
+                        columns={columns}
+                        pagination={paginationFactory()}
+                        />
                 </div>
                 <div>
                     <Link to="/sermons"><h2>Sermons</h2></Link>
                 </div>
+                <Footer />
             </div>
         )
     }

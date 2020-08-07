@@ -6,8 +6,8 @@ class Map extends Component {
         super(props);
         this.state = {
             currentLocation: {
-                lat: 35.1005717,
-                lng: -85.3247381
+                lat: 35.100592, 
+                lng: -85.322547
             }
         }
     }
@@ -15,7 +15,7 @@ class Map extends Component {
         return (
             <div>
                 <GoogleMap
-                    defaultZoom={8}
+                    defaultZoom={14}
                     defaultCenter={{ lat: -34.397, lng: 150.644 }}
                     center = {this.state.currentLocation}
                 >
