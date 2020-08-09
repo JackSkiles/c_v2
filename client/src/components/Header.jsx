@@ -82,7 +82,7 @@ export default function Header() {
                         </Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
-                <Link className="link"><Button className="contact" variant="light"><h3>Contact Us</h3></Button></Link>
+                <Link Link to="/contact" className="link"><Button className="contact" variant="light"><h3>Contact Us</h3></Button></Link>
             </div>
             <div className="drop">
                 <Dropdown >
@@ -99,7 +99,7 @@ export default function Header() {
                             </Dropdown.Menu>
                         </Dropdown>
                         <Dropdown.Divider />
-                        <Dropdown.Item><Link className="link"><Button className="contact" variant="light"><h3 className="contactText">Contact Us</h3></Button></Link></Dropdown.Item>
+                        <Dropdown.Item><Link to="/contact" className="link"><Button className="contact" variant="light"><h3 className="contactText">Contact Us</h3></Button></Link></Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
             </div>
