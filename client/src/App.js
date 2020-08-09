@@ -10,6 +10,7 @@ import Sermons from './components/Sermons';
 import Register from './components/register';
 import LoginAdmin from './components/LoginAdmin';
 import Upload from './components/Upload';
+import Contact from './components/Contact';
 
 class App extends Component {
   constructor(props) {
@@ -40,6 +41,7 @@ class App extends Component {
             <Route path="/directory" exact component={Directory}/> 
             <Route path="/sermons" exact component={Sermons}/>
             <Route path="/login" exact component={LogIn} />
+            <Route path="/contact" exact component={Contact} />
           </Switch>
         </Router>
       </div>
