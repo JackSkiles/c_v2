@@ -24,14 +24,15 @@ export default function Contact() {
       </div>
       <div className="mainCont">
         <Form className="contact-form" onSubmit={sendEmail}>
+          <h3>Email Us</h3>
           <Form.Control type="hidden" name="contact_number" />
-          <Form.Label>Name</Form.Label>
+          <Form.Label className="formText">Name:</Form.Label>
           <Form.Control type="text" name="user_name" />
-          <Form.Label>Email</Form.Label>
+          <Form.Label className="formText" >Email:</Form.Label>
           <Form.Control type="email" name="user_email" />
-          <Form.Label>Message</Form.Label>
-          <Form.Control name="message" />
-          <Button type="submit" value="Send">Send</Button>
+          <Form.Label className="formText" >Message:</Form.Label>
+          <Form.Control className="contact-control" name="message" />
+          <Button className="formText" id="button" type="submit" value="Send">Send</Button>
         </Form>
       </div>
     </div>

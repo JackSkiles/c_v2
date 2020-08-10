@@ -36,14 +36,35 @@
 }
 
 .contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border-radius: 5px;
     padding: 10px 15px 10px 15px;
     background-color: rgb(240, 240, 240);
     width: 30%
 }
 
+.contact-control {
+    height: 15vh;
+}
+
+.formText {
+    margin: 15px 0 15px 0;
+}
+
+#button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    width: 30%;
+    font-size: 3vh;
+}
+
 @media screen and (max-width: 980px){
-    .textCont, .textCont2 {
+    .textCont, .textCont2, .contact-form {
         width: 95%;
     }
 }
