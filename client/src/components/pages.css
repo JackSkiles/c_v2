@@ -35,6 +35,13 @@
     display: block;
 }
 
+.contact-form {
+    border-radius: 5px;
+    padding: 10px 15px 10px 15px;
+    background-color: rgb(240, 240, 240);
+    width: 30%
+}
+
 @media screen and (max-width: 980px){
     .textCont, .textCont2 {
         width: 95%;
