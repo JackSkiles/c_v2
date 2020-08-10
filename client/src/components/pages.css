@@ -62,6 +62,11 @@
     width: 30%;
     font-size: 3vh;
 }
+.theMap{ 
+    margin: 7vh 0 7vh 0;
+    width: 60%; 
+    height: 55vh;
+} 
 
 @media screen and (max-width: 980px){
     .textCont, .textCont2, .contact-form {
