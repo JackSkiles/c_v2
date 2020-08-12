@@ -54,25 +54,25 @@ export default function Header() {
                     <Dropdown.Menu className="dropMenu">
                         {/* BELIEFS */}
                         <Dropdown.Item className="dropdown-item">
-                            <Link to="/" className="link2">
+                            <Link to="/beliefs" className="link2">
                                 <h3 className="text">BELIEFS</h3>
                             </Link>
                         </Dropdown.Item>
                         {/* Elders */}
                         <Dropdown.Item className="dropdown-item">
-                            <Link to="/" className="link2">
+                            <Link to="/elders" className="link2">
                                 <h3 className="text">ELDERS</h3>
                             </Link>
                         </Dropdown.Item>
                         {/* HISTORY */}
                         <Dropdown.Item className="dropdown-item">
-                            <Link to="/" className="link2">
+                            <Link to="/history" className="link2">
                                 <h3 className="text">HISTORY</h3>
                             </Link>
                         </Dropdown.Item>
                         {/* FAQS */}
                         <Dropdown.Item className="dropdown-item">
-                            <Link to="/" className="link2">
+                            <Link to="/faq" className="link2">
                                 <h3 className="text">FAQS</h3>
                             </Link>
                         </Dropdown.Item>
@@ -96,15 +96,15 @@ export default function Header() {
                             <Dropdown.Toggle as={CustomToggle2} id="dropdown-custom-components" ><h3 className="text">About Us</h3>
                             </Dropdown.Toggle>
                             <Dropdown.Menu className="dropMenu2">
-                                <Dropdown.Item><Link to="/" className="link2"><h3 className="text">BELIEFS</h3></Link></Dropdown.Item>
-                                <Dropdown.Item><Link to="/" className="link2"><h3 className="text">ELDERS</h3></Link></Dropdown.Item>
+                                <Dropdown.Item><Link to="/beliefs" className="link2"><h3 className="text">BELIEFS</h3></Link></Dropdown.Item>
+                                <Dropdown.Item><Link to="/elders" className="link2"><h3 className="text">ELDERS</h3></Link></Dropdown.Item>
                                 <Dropdown.Item className="dropdown-item">
-                                    <Link to="/" className="link2">
+                                    <Link to="/faq" className="link2">
                                         <h3 className="text">FAQS</h3>
                                     </Link>
                                 </Dropdown.Item>
                                 <Dropdown.Item className="dropdown-item">
-                                    <Link to="/" className="link2">
+                                    <Link to="/history" className="link2">
                                         <h3 className="text">HISTORY</h3>
                                     </Link>
                                 </Dropdown.Item>

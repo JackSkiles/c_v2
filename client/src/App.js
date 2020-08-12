@@ -11,6 +11,10 @@ import Register from './components/register';
 import LoginAdmin from './components/LoginAdmin';
 import Upload from './components/Upload';
 import Contact from './components/Contact';
+import Beliefs from './components/Beliefs';
+import History from './components/History';
+import Elders from './components/Elders';
+import Faq from './components/Faq';
 
 class App extends Component {
   constructor(props) {
@@ -34,6 +38,10 @@ class App extends Component {
           <Header />
           <Switch>
             <Route path="/" exact component={Home} />
+            <Route path="/history" exact component={History} />
+            <Route path="/elders" exact component={Elders} />
+            <Route path="/faq" exact component={Faq} />
+            <Route path="/beliefs" exact component={Beliefs} />
             <Route path='/admin' exact component={LoginAdmin} />
             <Route path='/upload' exact component={Upload} />
             <Route path="/register" exact component={Register} />

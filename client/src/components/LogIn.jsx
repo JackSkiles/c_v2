@@ -3,6 +3,7 @@ import './login.css';
 import { Redirect, withRouter } from 'react-router-dom'
 import axios from 'axios'
 import Footer from './Footer'
+import { Form, Button } from 'react-bootstrap'
 
 export default function LogIn() {
     const [password, setPassword] = useState('')
@@ -25,20 +26,19 @@ export default function LogIn() {
         setPassword(event.target.value)
     }
     return (
-        <div className="main">
+        <div className="main2">
             {redirect ? <Redirect to='/directory' /> : (
             <div className="form">
-                <form onSubmit={authorizeLogin}>
+                <Form onSubmit={authorizeLogin}>
                     <div className="password">
                         <h1>Log In</h1>
                         <p>Some content is blocked and most be logged in to access.</p>
                         <input type="password" id="pass" name="password" onChange={myChangeHandler} value={password}></input>
                     </div>
-
                     <div className="button">
-                        <button type="submit">Log In</button>
+                        <Button variant="info" type="submit">Log In</Button>
                     </div>
-                </form>
+                </Form>
             </div>
             )}
             <Footer />
