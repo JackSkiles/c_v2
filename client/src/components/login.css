@@ -87,4 +87,12 @@
     .tables{
         width: 100%;
     }
+    .form{
+        width: 70%;
+    }
+    .main2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

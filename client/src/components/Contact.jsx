@@ -44,7 +44,7 @@ export default function Contact() {
           <Form.Control type="email" name="user_email" />
           <Form.Label className="formText" >Message:</Form.Label>
           <Form.Control className="contact-control" as="textarea" name="message" />
-          <Button className="formText" id="button" type="submit" value="Send">Send</Button>
+          <Button variant="info" className="formText" id="button" type="submit" value="Send">Send</Button>
         </Form>
         <div className="theMap"><Map />
         </div>
