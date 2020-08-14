@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Redirect, Link, withRouter } from 'react-router-dom'
 import { storage } from '../firebase';
 import './login.css';
-import { Button} from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 import Axios from 'axios';
 import './pages.css';
 
@@ -14,7 +14,12 @@ export default class Upload extends Component {
             redirect: false,
             url: null,
             elder: '',
-            progress: 0
+            progress: 0,
+            firstName: '',
+            lastName: '',
+            email: '',
+            phone: '',
+            address: ''
         }
         this.handleChange = this
             .handleChange
@@ -24,12 +29,17 @@ export default class Upload extends Component {
     handleChange = e => {
         if (e.target.files[0]) {
             const url = e.target.files[0];
-            this.setState(() => ({ url}));
+            this.setState(() => ({ url }));
         }
     }
-    myChangeHandler = (event) => {
-        this.setState({ elder: event.target.value})
+
+    myChangeHandler = (e) => {
+        const { value, name } = e.target;
+        this.setState({
+            [name]: value
+        })
     }
+
     handleUpload = () => {
         const { url } = this.state;
         const uploadTask = storage.ref(`sermons/${url.name}`).put(url);
@@ -38,7 +48,7 @@ export default class Upload extends Component {
                 // progrss function ....
                 const progress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
                 this.setState({ progress })
-                
+
             },
             (error) => {
                 // error function ....
@@ -46,15 +56,31 @@ export default class Upload extends Component {
             }
         )
         Axios.post('api/v1/sermons',
-                {
-                    url: this.state.url.name,
-                    elder: this.state.elder,
-                    headers: {
-                        'Content-Type': 'application/json;charset=UTF-8'
-                    },
-                })
-        
+            {
+                url: this.state.url.name,
+                elder: this.state.elder,
+                headers: {
+                    'Content-Type': 'application/json;charset=UTF-8'
+                },
+            })
+
     }
+
+    handleFormSubmit = (e) => {
+        e.preventDefault();
+        Axios.post('/api/v1/directory',
+            {
+                firstName: this.state.firstName,
+                lastName: this.state.lastName,
+                email: this.state.email,
+                phone: this.state.phone,
+                address: this.state.address,
+                headers: {
+                    'Content-Type': 'application/json;charset=UTF-8'
+                },
+            })
+    }
+
     componentDidMount() {
         fetch(`/api/v1/user`)
             .then(res =>
@@ -83,10 +109,18 @@ export default class Upload extends Component {
                         <input type="file" onChange={this.handleChange} />
                     </div>
                     <div className="textCont">
-                        <input onChange={this.myChangeHandler} />
+                        <input name="elder" onChange={this.myChangeHandler} />
                     </div>
                     <div className="textCont">
                         <Button onClick={this.handleUpload}>Upload</Button>
+                    </div>
+                    <div className="textCont">
+                        <input name="firstName" onChange={this.myChangeHandler} defaultValue="First Name"></input>
+                        <input name="lastName" onChange={this.myChangeHandler} defaultValue="Last Name"></input>
+                        <input name="email" onChange={this.myChangeHandler} defaultValue="Email"></input>
+                        <input name="phone" onChange={this.myChangeHandler} defaultValue="Phone"></input>
+                        <input name="address" onChange={this.myChangeHandler} defaultValue="Address"></input>
+                        <Button onClick={this.handleFormSubmit}>Add Member</Button>
                     </div>
                 </div>
             </div>
