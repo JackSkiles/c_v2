@@ -6,7 +6,7 @@ export default function Beliefs() {
     return (
         <div className="main">
             <div className="imgCont">
-                <img className="topImg" src="sports.jpg"></img>
+                <img className="topImg" src="bible.jpg"></img>
             </div>
             <div className="mainCont">
                 <div className="textCont">

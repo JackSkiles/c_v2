@@ -6,7 +6,7 @@ export default function Services() {
     return (
         <div className="main">
             <div className="imgCont">
-                <img className="topImg" src="sports.jpg"></img>
+                <img className="topImg" src="church3.jpg"></img>
             </div>
             <div className="mainCont">
                 <div className="textCont">

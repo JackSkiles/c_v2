@@ -11,7 +11,7 @@ export default function Home() {
             <div className="carousel">
                 <Carousel>
                     <Carousel.Item className="cIItem">
-                        <img className="d-block w-100" id="img" src='../OnePiece.jpg' alt="First slide"></img>
+                        <img className="d-block w-100" id="img" src='../church.jpg' alt="First slide"></img>
                         <Carousel.Caption>
                             <h3>First slide label</h3>
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -21,7 +21,7 @@ export default function Home() {
                         <img
                             className="d-block w-100"
                             id="img"
-                            src="../chapter_274.png"
+                            src="../church2.jpg"
                             alt="Third slide" 
                         />
                         <Carousel.Caption>
@@ -33,96 +33,12 @@ export default function Home() {
                         <img
                             className="d-block w-100"
                             id="img"
-                            src="../chapter_357.png"
+                            src="../church4.jpg"
                             alt="Third slide"
                         />
                         <Carousel.Caption>
                             <h3>Second slide label</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item className="cIItem">
-                        <img
-                            className="d-block w-100"
-                            id="img"
-                            src="../chapter_391.png"
-                            alt="Third slide"
-                        />
-                        <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item className="cIItem">
-                        <img
-                            className="d-block w-100"
-                            id="img"
-                            src="../chapter_439.png"
-                            alt="Third slide"
-                        />
-                        <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item className="cIItem">
-                        <img
-                            className="d-block w-100"
-                            id="img"
-                            src="../chapter_503.png"
-                            alt="Third slide"
-                        />
-                        <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item className="cIItem">
-                        <img
-                            className="d-block w-100"
-                            id="img"
-                            src="../chapter_532.png"
-                            alt="Third slide"
-                        />
-                        <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item className="cIItem">
-                        <img
-                            className="d-block w-100"
-                            id="img"
-                            src="../chapter_685.png"
-                            alt="Third slide"
-                        />
-                        <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item className="cIItem">
-                        <img
-                            className="d-block w-100"
-                            id="img"
-                            src="../chapter_699.png"
-                            alt="Third slide"
-                        />
-                        <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item className="cIItem">
-                        <img
-                            className="d-block w-100"
-                            id="img"
-                            src="../swamp.jpg"
-                            alt="Third slide"
-                        />
-                        <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
