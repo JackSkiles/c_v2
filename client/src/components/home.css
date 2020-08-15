@@ -48,7 +48,7 @@
         font-size: 1rem;
     }
     .theMap{
-        width: 90%;
-        height: 45vh
+        width: 100%;
+        height: 45vh;
     }
 }
