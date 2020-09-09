@@ -27,7 +27,7 @@ export default function LogIn() {
     }
     return (
         <div className="main2">
-            {redirect ? <Redirect to='/directory' /> : (
+            {redirect ? <Redirect to='/calendar' /> : (
             <div className="form">
                 <Form onSubmit={authorizeLogin}>
                     <div className="password">
