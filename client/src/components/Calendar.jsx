@@ -1,7 +1,7 @@
 
 import Footer from './Footer';
 import React, { Component } from 'react';
-import { Redirect, Link, withRouter } from 'react-router-dom'
+import { Redirect, Link, withRouter } from 'react-router-dom';
 
 
 export default class App extends Component {
@@ -28,7 +28,7 @@ export default class App extends Component {
         return (
             <div className="mainDiv2">
                 {this.state.redirect ? <Redirect to='/login' /> : null}
-                <div>
+                <div className="links">
                     <Link to="/sermons"><h2>Sermons</h2></Link>
                     <Link to="/directory"><h2>Directory</h2></Link>
                 </div>
