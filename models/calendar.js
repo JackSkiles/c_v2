@@ -14,6 +14,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Calendar.init({
+    date: DataTypes.STRING,
+    day: DataTypes.STRING,
+    month: DataTypes.STRING,
+    year: DataTypes.STRING,
+    time: DataTypes.STRING,
     event: DataTypes.STRING
   }, {
     sequelize,
