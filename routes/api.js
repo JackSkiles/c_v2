@@ -21,6 +21,12 @@ router.get('/directory', checkAuth, function(req, res, next) {
       res.json(data);
     }); 
   });
+router.get('/calendar', checkAuth, function(req, res, next) {
+    db.Calendar.findAll(
+    ).then((data) => {
+      res.json(data);
+    }); 
+  });
   
   router.get('/sermons', checkAuth, (req, res) => {
     db.Sermon.findAll()
