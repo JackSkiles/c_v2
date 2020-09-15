@@ -14,6 +14,7 @@ router.get('/user', checkAuth, function (req, res, next) {
         })
 })
 
+
 router.get('/directory', checkAuth, function(req, res, next) {
     db.Directory.findAll(
     ).then((data) => {

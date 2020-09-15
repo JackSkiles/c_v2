@@ -28,19 +28,11 @@ export default class App extends Component {
     }
 
     render() {
-        const columns = [
-           
-        ]
         return (
             <div className="mainDiv2">
                 {this.state.redirect ? <Redirect to='/login' /> : null}
                 <div className="tables">
-                    <BootstrapTable 
-                        keyField="name"
-                        data={this.state.calendar}
-                        columns={columns}
-                        pagination={paginationFactory()}
-                        />
+                   
                 </div>
                 <div className="links">
                     <Link to="/sermons"><h2>Sermons</h2></Link>
