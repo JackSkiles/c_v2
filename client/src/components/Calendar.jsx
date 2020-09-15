@@ -37,11 +37,8 @@ export default class App extends Component {
 
     render() {
         const columns = [
-            {dataField: "Days", text: 'January'},
-            {dataField: "February", text: 'February'},
-            {dataField: "March", text: 'March'},
-            {dataField: "April", text: 'April'},
-            {dataField: "address", text: 'Home Address'}
+            {dataField: "Day", text: 'January'},
+            
         ]
         return (
             <div className="mainDiv2">
