@@ -12,7 +12,7 @@ export default class App extends Component {
         super(props);
         this.state = {
             redirect: false,
-            calendar: []
+            months: []
         }
     }
 
@@ -26,31 +26,30 @@ export default class App extends Component {
                     this.setState({ redirect: true })
                 }
             }).then(() => {
-            fetch('/api/v1/calendar')
-                .then(res => res.json()
-                )
-                .then(data => {
-                    this.setState({ calendar: data })
-                })
-        })
+                fetch('/api/v1/months')
+                    .then(res => res.json()
+                    )
+                    .then(data => {
+                        this.setState({ months: data })
+                    })
+            })
     }
 
     render() {
-        const columns = [
-            {dataField: "Day", text: 'January'},
-            
-        ]
+        
         return (
             <div className="mainDiv2">
                 {this.state.redirect ? <Redirect to='/login' /> : null}
-                <div className="tables">
-                    <BootstrapTable 
-                        keyField="name"
-                        data={this.state.calendar}
-                        columns={columns}
-                        pagination={paginationFactory()}
-                        />
-                </div>
+                {this.state.months.map(calendar => {
+                    return (
+                        <div key={calendar.id}>
+                            <h1>{calendar.month}</h1>
+                            <div>
+                                <p>{calendar.days}</p>
+                            </div>
+                        </div>
+                    )
+                })}
                 <div className="links">
                     <Link to="/sermons"><h2>Sermons</h2></Link>
                     <Link to="/directory"><h2>Directory</h2></Link>

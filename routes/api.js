@@ -21,8 +21,16 @@ router.get('/directory', checkAuth, function(req, res, next) {
       res.json(data);
     }); 
   });
+  
 router.get('/calendar', checkAuth, function(req, res, next) {
     db.Calendar.findAll(
+    ).then((data) => {
+      res.json(data);
+    }); 
+  });
+  
+router.get('/months', checkAuth, function(req, res, next) {
+    db.Month.findAll(
     ).then((data) => {
       res.json(data);
     }); 
