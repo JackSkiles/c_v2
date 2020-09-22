@@ -12,7 +12,8 @@ export default class App extends Component {
         super(props);
         this.state = {
             redirect: false,
-            months: []
+            months: [],
+            days: [],
         }
     }
 
@@ -31,8 +32,25 @@ export default class App extends Component {
                     )
                     .then(data => {
                         this.setState({ months: data })
+                        console.log(this.state.months)
                     })
             })
+            .then(() => {
+                let newDate = {
+                    month: [],
+                    days: []
+                };
+                let newerDate = [];
+                let times = [];
+                for(let i = 0; i <= this.state.months.length; i++){
+                    newDate.month = this.state.months[i].month;
+                    for(let n = 0; n <= this.state.months[i].days; i++){
+                        newDate.days.push(n);
+                    }
+                } newerDate.push(newDate);
+                  this.setState({days: newerDate});
+                  console.log(this.state.days);
+            });
     }
 
     render() {
