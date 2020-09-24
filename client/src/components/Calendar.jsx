@@ -34,23 +34,24 @@ export default class App extends Component {
                         this.setState({ months: data })
                         console.log(this.state.months)
                     })
+                    .then(() => {
+                        console.log(this.state.months[0].days)
+                        let newDate = {
+                            month: [],
+                            days: []
+                        };
+                        console.log(newDate.month);
+                        let newerDate = [];
+                        let times = [];
+                        for(let i = 0; i < this.state.months.length; i++){
+                            newDate.month.push(this.state.months);
+                            for(let n = 0; n <= this.state.months[i].days; n++){
+                                newDate.days.push(n);
+                            }
+                        } newerDate.push(newDate);
+                          this.setState({days: newerDate});
+                          console.log(this.state.days);
             })
-            .then(() => {
-                let newDate = {
-                    month: [],
-                    days: []
-                };
-                console.log(newDate.month);
-                let newerDate = [];
-                let times = [];
-                for(let i = 0; i <= this.state.months.length; i++){
-                    newDate.month.push(this.state.months);
-                    for(let n = 0; n <= this.state.months[i].days; i++){
-                        newDate.days.push(n);
-                    }
-                } newerDate.push(newDate);
-                  this.setState({days: newerDate});
-                  console.log(this.state.days);
             });
     }
 
