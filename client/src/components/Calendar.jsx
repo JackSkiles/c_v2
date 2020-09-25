@@ -40,14 +40,17 @@ export default class App extends Component {
                             month: [],
                             days: []
                         };
+                        let monthDays = [];
                         console.log(newDate.month);
                         let newerDate = [];
                         let times = [];
                         for(let i = 0; i < this.state.months.length; i++){
                             newDate.month.push(this.state.months);
                             for(let n = 0; n <= this.state.months[i].days; n++){
-                                newDate.days.push(n);
+                                monthDays.push(n);
                             }
+                            newDate.days.push(monthDays);
+                            monthDays = [];
                         } newerDate.push(newDate);
                           this.setState({days: newerDate});
                           console.log(this.state.days);
