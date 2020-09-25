@@ -45,7 +45,7 @@ export default class App extends Component {
                         let newerDate = [];
                         let times = [];
                         for(let i = 0; i < this.state.months.length; i++){
-                            newDate.month.push(this.state.months);
+                            newDate.month.push(this.state.months[i]);
                             for(let n = 0; n <= this.state.months[i].days; n++){
                                 monthDays.push(n);
                             }
