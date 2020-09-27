@@ -53,7 +53,7 @@ export default class App extends Component {
                             monthDays = [];
                         } newerDate.push(newDate);
                           this.setState({days: newerDate});
-                          console.log(this.state.days);
+                          console.log(this.state.days[0].month[2].month);
             })
             });
     }
@@ -63,22 +63,14 @@ export default class App extends Component {
         return (
             <div className="mainDiv2">
                 {this.state.redirect ? <Redirect to='/login' /> : null}
-                {this.state.months.map(calendar => {
-                    return (
-                        <div key={calendar.id}>
-                            <h1>{calendar.month}</h1>
-                            <div>
-                                {/* <p>{calendar.days}</p> */}
-                            </div>
-                        </div>
-                    )
-                })}
-                {this.state.days.map(dayInMonth => {
+                {this.state.days.map(calendar => {
+                    let i = 0;
                     return (
                         <div>
+                            <h1>{calendar.month[i].month}</h1>
                             <div>
-                                {dayInMonth.days}
-                            </div>   
+                                <p>{calendar.days}</p>
+                            </div>
                         </div>
                     )
                 })}
