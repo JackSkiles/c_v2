@@ -68,8 +68,17 @@ export default class App extends Component {
                         <div key={calendar.id}>
                             <h1>{calendar.month}</h1>
                             <div>
-                                <p>{calendar.days}</p>
+                                {/* <p>{calendar.days}</p> */}
                             </div>
+                        </div>
+                    )
+                })}
+                {this.state.days.map(dayInMonth => {
+                    return (
+                        <div>
+                            <div>
+                                {dayInMonth.days}
+                            </div>   
                         </div>
                     )
                 })}
