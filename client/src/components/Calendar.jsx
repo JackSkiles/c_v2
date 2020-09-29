@@ -14,7 +14,7 @@ export default class App extends Component {
             redirect: false,
             months: [],
             days: [],
-            loop: 0,
+            loop: 2,
             loop1: false
         }
     }
@@ -54,22 +54,23 @@ export default class App extends Component {
                             newDate.days.push(monthDays);
                             monthDays = [];
                         }
+                        newDate.month.unshift(" ");
                         newerDate.push(newDate);
-                          this.setState({days: newerDate});
-                          console.log(this.state.days[0].month[2].month);
-                        })
-                    });
-                }
+                        this.setState({days: newerDate});
+                    })
+                });
+            }
+            
+            render() {
                 
-                render() {
-                    
-                    return (
-                        <div className="mainDiv2">
+                return (
+                    <div className="mainDiv2">
                 {this.state.redirect ? <Redirect to='/login' /> : null}
                 {this.state.days.map(calendar => {
-                    if (this.state.loop != 0){
+                    if(this.state.loop != this.state.days[0].month.length - 1){
                         this.setState({loop: this.state.loop + 1})
                     }
+                    console.log(this.state.loop)
                     return (
                         <div>
                             <h1>{calendar.month[this.state.loop].month}</h1>
