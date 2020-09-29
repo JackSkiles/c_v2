@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import { Redirect, Link, withRouter } from 'react-router-dom';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import BootstrapTable from 'react-bootstrap-table-next';
+import Calendar from 'react-calendar';
 
 
 
@@ -14,8 +15,6 @@ export default class App extends Component {
             redirect: false,
             months: [],
             days: [],
-            loop: 2,
-            loop1: false
         }
     }
 
@@ -36,28 +35,29 @@ export default class App extends Component {
                         this.setState({ months: data })
                         console.log(this.state.months)
                     })
-                    .then(() => {
-                        console.log(this.state.months[0].days)
-                        let newDate = {
-                            month: [],
-                            days: []
-                        };
-                        let monthDays = [];
-                        console.log(newDate.month);
-                        let newerDate = [];
-                        let times = [];
-                        for(let i = 0; i < this.state.months.length; i++){
-                            newDate.month.push(this.state.months[i]);
-                            for(let n = 0; n <= this.state.months[i].days; n++){
-                                monthDays.push(n);
-                            }
-                            newDate.days.push(monthDays);
-                            monthDays = [];
-                        }
-                        newDate.month.unshift(" ");
-                        newerDate.push(newDate);
-                        this.setState({days: newerDate});
-                    })
+                    // .then(() => {
+                    //     console.log(this.state.months[0].days)
+                    //     let newDate = {
+                    //         month: [],
+                    //         days: []
+                    //     };
+                    //     let monthDays = [];
+                    //     console.log(newDate.month);
+                    //     let newerDate = [];
+                    //     let times = [];
+                    //     for(let i = 0; i < this.state.months.length; i++){
+                    //         newDate.month.push(this.state.months[i]);
+                    //         for(let n = 0; n <= this.state.months[i].days; n++){
+                    //             monthDays.push(n);
+                    //         }
+                    //         newDate.days.push(monthDays);
+                    //         monthDays = [];
+                    //     }
+                    //     newDate.month.unshift(" ");
+                    //     newerDate.push(newDate);
+                    //     this.setState({days: newerDate});
+                    //     console.log(this.state.days)
+                    // })
                 });
             }
             
@@ -65,22 +65,20 @@ export default class App extends Component {
                 
                 return (
                     <div className="mainDiv2">
-                {this.state.redirect ? <Redirect to='/login' /> : null}
-                {this.state.days.map(calendar => {
-                    if(this.state.loop != this.state.days[0].month.length - 1){
-                        this.setState({loop: this.state.loop + 1})
-                    }
-                    console.log(this.state.loop)
+                    {this.state.redirect ? <Redirect to='/login' /> : null}
+                    <Calendar />
+                
+                {/* {this.state.months.map(calendar => {
                     return (
                         <div>
-                            <h1>{calendar.month[this.state.loop].month}</h1>
+                            <h1>{calendar.month}</h1>
                             <div>
                                 <p>{calendar.days}</p>
                             </div>
                         </div>
                     )
-                
-                })}
+                 */}
+                {/* })} */}
                 <div className="links">
                     <Link to="/sermons"><h2>Sermons</h2></Link>
                     <Link to="/directory"><h2>Directory</h2></Link>
