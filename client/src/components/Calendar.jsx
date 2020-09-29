@@ -14,6 +14,8 @@ export default class App extends Component {
             redirect: false,
             months: [],
             days: [],
+            loop: 0,
+            loop1: false
         }
     }
 
@@ -51,28 +53,32 @@ export default class App extends Component {
                             }
                             newDate.days.push(monthDays);
                             monthDays = [];
-                        } newerDate.push(newDate);
+                        }
+                        newerDate.push(newDate);
                           this.setState({days: newerDate});
                           console.log(this.state.days[0].month[2].month);
-            })
-            });
-    }
-
-    render() {
-        
-        return (
-            <div className="mainDiv2">
+                        })
+                    });
+                }
+                
+                render() {
+                    
+                    return (
+                        <div className="mainDiv2">
                 {this.state.redirect ? <Redirect to='/login' /> : null}
                 {this.state.days.map(calendar => {
-                    let i = 0;
+                    if (this.state.loop != 0){
+                        this.setState({loop: this.state.loop + 1})
+                    }
                     return (
                         <div>
-                            <h1>{calendar.month[i].month}</h1>
+                            <h1>{calendar.month[this.state.loop].month}</h1>
                             <div>
                                 <p>{calendar.days}</p>
                             </div>
                         </div>
                     )
+                
                 })}
                 <div className="links">
                     <Link to="/sermons"><h2>Sermons</h2></Link>
