@@ -5,6 +5,7 @@ import { Redirect, Link, withRouter } from 'react-router-dom';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import BootstrapTable from 'react-bootstrap-table-next';
 import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
 
 
