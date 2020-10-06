@@ -15,7 +15,7 @@ import Beliefs from './components/Beliefs';
 import History from './components/History';
 import Elders from './components/Elders';
 import Faq from './components/Faq';
-import Calendar from './components/Calendar';
+import Calendar from './components/BookingCalendar';
 
 class App extends Component {
   constructor(props) {
