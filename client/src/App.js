@@ -15,7 +15,6 @@ import Beliefs from './components/Beliefs';
 import History from './components/History';
 import Elders from './components/Elders';
 import Faq from './components/Faq';
-import Calendar from './components/BookingCalendar';
 
 class App extends Component {
   constructor(props) {
@@ -47,7 +46,6 @@ class App extends Component {
             <Route path='/upload' exact component={Upload} />
             <Route path="/register" exact component={Register} />
             <Route path="/services" exact component={Services} />
-            {/* <Route path="/calendar" exact component={Calendar} /> */}
             <Route path="/directory" exact component={Directory}/> 
             <Route path="/sermons" exact component={Sermons}/>
             <Route path="/login" exact component={LogIn} />
