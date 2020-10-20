@@ -32,7 +32,7 @@ export default function LogIn() {
                 <Form onSubmit={authorizeLogin}>
                     <div className="password">
                         <h1>Log In</h1>
-                        <p>Some content is blocked and most be logged in to access.</p>
+                        <p>Some content is blocked and must be logged in to access.</p>
                         <input type="password" id="pass" name="password" onChange={myChangeHandler} value={password}></input>
                     </div>
                     <div className="button">

@@ -55,31 +55,31 @@ export default function Header() {
                         {/* BELIEFS */}
                         <Dropdown.Item className="dropdown-item">
                             <Link to="/beliefs" className="link2">
-                                <h3 className="text">BELIEFS</h3>
+                                <h3 className="text2">DISTINCTIONS</h3>
                             </Link>
                         </Dropdown.Item>
                         {/* Elders */}
                         <Dropdown.Item className="dropdown-item">
                             <Link to="/elders" className="link2">
-                                <h3 className="text">ELDERS</h3>
+                                <h3 className="text2">LEADERS</h3>
                             </Link>
                         </Dropdown.Item>
                         {/* HISTORY */}
                         <Dropdown.Item className="dropdown-item">
                             <Link to="/history" className="link2">
-                                <h3 className="text">HISTORY</h3>
+                                <h3 className="text2">HISTORY</h3>
                             </Link>
                         </Dropdown.Item>
                         {/* FAQS */}
                         <Dropdown.Item className="dropdown-item">
                             <Link to="/faq" className="link2">
-                                <h3 className="text">FAQS</h3>
+                                <h3 className="text2">FAQS</h3>
                             </Link>
                         </Dropdown.Item>
                         {/* LOG IN */}
                         <Dropdown.Item className="dropdown-item">
                             <Link to="/login" className="link2">
-                                <h3 className="text">LOG IN</h3>
+                                <h3 className="text2">LOG IN</h3>
                             </Link>
                         </Dropdown.Item>
                     </Dropdown.Menu>
@@ -96,21 +96,21 @@ export default function Header() {
                             <Dropdown.Toggle as={CustomToggle2} id="dropdown-custom-components" ><h3 className="text">About Us</h3>
                             </Dropdown.Toggle>
                             <Dropdown.Menu className="dropMenu2">
-                                <Dropdown.Item><Link to="/beliefs" className="link2"><h3 className="text">BELIEFS</h3></Link></Dropdown.Item>
-                                <Dropdown.Item><Link to="/elders" className="link2"><h3 className="text">ELDERS</h3></Link></Dropdown.Item>
+                                <Dropdown.Item><Link to="/beliefs" className="link2"><h3 className="text2">DISTINCTIONS</h3></Link></Dropdown.Item>
+                                <Dropdown.Item><Link to="/elders" className="link2"><h3 className="text2">LEADERS</h3></Link></Dropdown.Item>
                                 <Dropdown.Item className="dropdown-item">
                                     <Link to="/faq" className="link2">
-                                        <h3 className="text">FAQS</h3>
+                                        <h3 className="text2">FAQS</h3>
                                     </Link>
                                 </Dropdown.Item>
                                 <Dropdown.Item className="dropdown-item">
                                     <Link to="/history" className="link2">
-                                        <h3 className="text">HISTORY</h3>
+                                        <h3 className="text2">HISTORY</h3>
                                     </Link>
                                 </Dropdown.Item>
                                 <Dropdown.Item className="dropdown-item">
                                     <Link to="/login" className="link2">
-                                        <h3 className="text">LOG IN</h3>
+                                        <h3 className="text2">LOG IN</h3>
                                     </Link>
                                 </Dropdown.Item>
                             </Dropdown.Menu>

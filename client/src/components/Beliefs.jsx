@@ -10,7 +10,7 @@ export default function Beliefs() {
             </div>
             <div className="mainCont">
                 <div className="textCont">
-                    <h2>Our Beliefs:</h2>
+                    <h2>Our Distinctions:</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus auctor tellus, quis commodo purus congue ac.
                             Integer blandit pellentesque commodo. Aliquam est tortor, venenatis vel euismod a, pharetra nec elit. Nulla vitae magna luctus orci suscipit mattis non at turpis. Sed non tristique felis. Nam vitae sem sed mauris tincidunt pretium. Nunc consectetur augue eu ipsum blandit, a sodales sem aliquam. Nulla orci nulla, blandit et pharetra et, cursus vel purus. Vestibulum varius et risus sit amet mollis. Nunc porttitor egestas turpis, ut fermentum nisi sodales sed. Nulla vehicula finibus nulla, at sollicitudin sem condimentum non. Vivamus vel nisl quam. Cras nunc nulla, aliquet non tellus sed, lobortis pellentesque eros. Ut faucibus bibendum dapibus.</p>
                 </div>
