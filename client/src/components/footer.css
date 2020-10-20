@@ -8,9 +8,27 @@
     width: 100vw;
 }
 
+.textCont {
+    display: flex;
+    flex-direction: column;
+}
+
+.picCont {
+    display: flex;
+    justify-content: space-around;
+}
+
+#pic {
+    width: 60%
+}
 .mainCont2 {
    width: 35%;
    color: honeydew;
+}
+
+.mainCont3 {
+    display: flex;
+    justify-content: center;
 }
 
 .mainCont2 p {
