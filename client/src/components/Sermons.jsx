@@ -6,7 +6,8 @@ import './login.css';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import BootstrapTable from 'react-bootstrap-table-next';
 import * as ReactBootstrap from 'react-bootstrap';
-import Footer from './Footer'
+import Footer from './Footer';
+import GroupMe from './GroupMe';
 
 export default class Sermons extends Component {
     constructor(props) {
@@ -68,6 +69,9 @@ export default class Sermons extends Component {
                         pagination={paginationFactory()}
                         rowEvents={rowEvents}
                     />
+                </div>
+                <div>
+                    <GroupMe />
                 </div>
                 <div>
                     <Link to="/directory"><h2>Directory</h2></Link>
