@@ -8,9 +8,10 @@ const apiRouter = require('./routes/api');
 const logger = require('morgan');
 const session = require('express-session');
 const db = require('./models');
-const cors = require('corss');
+const cors = require('cors');
 const stripe = require('stripe')('sk_test_51HfAIJGuKajdMWRyeTCxNqg0wb4Otxk8owRIjtQNqFn3zzeYkFk4C8KdD5b8jQgqzzjTj7pNJmsBuhXyKrVU67AV00CwmOMQyT')
-const uuid = require('uuid/v4')
+const { v4: uuidv4 } = require('uuid');
+
 
 let app = express();
 
@@ -39,6 +40,45 @@ app.use('/api/v1/', apiRouter);
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'client/build/index.html'))
 })
+
+app.get("/", (req, res) => {
+  res.send("add your stripe secret key!");
+});
+
+app.post("/checkout", async (req, res) => {
+  console.log("Request:", req.body);
+
+  let error;
+  let status;
+  try {
+    const { product, token } = req.body;
+
+    const customer = await
+    stripe.customers.create({
+      email: token.email,
+      source: token.id
+    })
+
+    const idempotency_key = uuid();
+    const charge = await stripe.charges.create(
+      {
+        amount: price,
+        currency: 'usd',
+        customer: customer.id,
+        receipt_email: token.email,
+        description: 'Than you for your donation!'
+      },
+      {
+      idempotency_key
+      }
+    );
+    console.log("Charge", { charge});
+    status = "success";
+  }catch (error) {
+    console.error("Error", error);
+    status = "failure";
+  }
+});
 
 // // error handler
 // app.use(function (err, req, res, next) {
