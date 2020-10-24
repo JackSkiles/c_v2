@@ -1,12 +1,27 @@
 import React, { useState, useEffect } from 'react'
 import StripeCheckout from 'react-stripe-checkout';
 import { Form, Button } from 'react-bootstrap';
+import axios from 'axios';
+import { toast } from 'react-toastify';
+
+toast.configure();
 
 export default function Giving() {
     const [price, setPrice] = useState(0.00);
 
-    function handleToken(token, addresses) {
-        console.log({ token, addresses, price })
+    async function handleToken(token) {
+        // console.log({ token, addresses, price })
+        const response = await axios.post('https://ry7v0516on.sse.codesandbox.io/checkout', {
+            token
+        });
+        const { status } = response.data
+        if (status === 'success'){
+            toast('Success! Check email for receipt',
+            { type: 'success' })
+        } else {
+            toast("Something went wrong", { type:
+            "error" });
+        }
     }
     const myChangeHandler = (event) => {
         setPrice(parseInt(event.target.value))
