@@ -1,13 +1,16 @@
-let createError = require('http-errors');
-let express = require('express');
-let socket = require('socket.io');
-let path = require('path');
-let cookieParser = require('cookie-parser');
-let bodyParser = require('body-parser')
-let apiRouter = require('./routes/api');
-let logger = require('morgan');
-let session = require('express-session');
+const createError = require('http-errors');
+const express = require('express');
+const socket = require('socket.io');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser')
+const apiRouter = require('./routes/api');
+const logger = require('morgan');
+const session = require('express-session');
 const db = require('./models');
+const cors = require('corss');
+const stripe = require('stripe')('sk_test_51HfAIJGuKajdMWRyeTCxNqg0wb4Otxk8owRIjtQNqFn3zzeYkFk4C8KdD5b8jQgqzzjTj7pNJmsBuhXyKrVU67AV00CwmOMQyT')
+const uuid = require('uuid/v4')
 
 let app = express();
 
