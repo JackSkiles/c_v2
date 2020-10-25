@@ -24,14 +24,14 @@ export default function Giving() {
         }
     }
     const myChangeHandler = (event) => {
-        setPrice(parseInt(event.target.value))
+        setPrice(event.target.value)
     }
     return (
         <div>
-            <div className="form">
+            <div>
                 <Form>
                     <div>
-                        <h2>Enter amount you would like to give:</h2>
+                        <h2>Enter amount you would like to give in dollars:</h2>
                         <input type="integer" name="password" onChange={myChangeHandler} value={price}></input>
                     </div>
                 </Form>
@@ -39,7 +39,7 @@ export default function Giving() {
             <StripeCheckout
                 stripeKey="pk_test_51HfAIJGuKajdMWRykHExDj6ZSCNHsex0qYE0IfOm2jz2ZOkdb02sNhiNpgj7ygBGWvFle6HdU3tahaE5lDHF5Itk00qgcIl0lU"
                 token={handleToken}
-                amount={price}
+                amount={price + '00'}
             />
         </div>
     )
