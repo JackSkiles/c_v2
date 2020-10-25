@@ -72,4 +72,8 @@
     .textCont, .textCont2, .contact-form {
         width: 95%;
     }
+    .theMap {
+        height: 45vh;
+        width: 80%;
+    }
 }
