@@ -1,8 +1,29 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Footer from './Footer'
+import { Form, Button } from 'react-bootstrap'
 
-export default function Faq() {
-    return (
+export default class Faq extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            hidden: ["hide", "hide", "hide", "hide",
+                    "hide", "hide", "hide", "hide", "hide",
+                    "hide", "hide", "hide", "hide", "hide",
+                    "hide", "hide", "hide", "hide"]
+        }
+    }
+    handleChange = (e) => {
+        const { name } = e.target;
+        const { hidden } = this.state;
+        const value = parseInt(name);
+        console.log(name);
+        hidden[parseInt(name)] = "show";
+        this.setState({
+            hidden,
+        })
+    }
+        render() {
+            return(
         <div className="main">
             <div className="imgCont">
                 <img className="topImg" src="bible.jpg"></img>
@@ -10,7 +31,7 @@ export default function Faq() {
             <div className="mainCont">
                 <div className="textCont">
                     <h2>Frequently Asked Questions:</h2>
-                    <h5>Q: What should I wear?</h5>
+                    <button className={this.state.hidden[0]} name="0" onClick={this.handleChange}>Q: What should I wear?</button>
                     <h5>Q: What time are services?</h5>
                     <h5>Q: How do you practice communion?</h5>
                     <h5>Q: What am I expected to participate in?</h5>
@@ -24,5 +45,6 @@ export default function Faq() {
             </div>
             <Footer />
         </div>
-    )
+            )
+        }
 }
