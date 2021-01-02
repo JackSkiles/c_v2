@@ -17,7 +17,11 @@ export default class Faq extends Component {
         const { hidden } = this.state;
         const value = parseInt(name);
         console.log(name);
-        hidden[parseInt(name)] = "show";
+        if(this.state.hidden[parseInt(name)] == "show"){
+            hidden[parseInt(name)] = "hide";
+        } else{
+            hidden[parseInt(name)] = "show";
+        }
         this.setState({
             hidden,
         })
@@ -31,7 +35,8 @@ export default class Faq extends Component {
             <div className="mainCont">
                 <div className="textCont">
                     <h2>Frequently Asked Questions:</h2>
-                    <button className={this.state.hidden[0]} name="0" onClick={this.handleChange}>Q: What should I wear?</button>
+                    <button name="0" onClick={this.handleChange}>Q: What should I wear?</button>
+                    <p className={this.state.hidden[0]}></p>
                     <h5>Q: What time are services?</h5>
                     <h5>Q: How do you practice communion?</h5>
                     <h5>Q: What am I expected to participate in?</h5>
