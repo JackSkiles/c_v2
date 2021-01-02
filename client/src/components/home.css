@@ -14,7 +14,13 @@
     height: 80vh;
 }
 
+.show {
 
+}
+
+.hide {
+    display: none;
+}
 .theMap{ 
     margin: 7vh 0 7vh 0;
     width: 60%; 
