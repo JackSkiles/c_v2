@@ -52,7 +52,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="mapDiv">
-                <iframe src="https://player.twitch.tv/?channel=chattanoogapbc&parent=https://c-v2.herokuapp.com/" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+                <iframe src="https://player.twitch.tv/?channel=chattanoogapbc&parent=www.c-v2.herokuapp.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
                 </div>
             </div>
             <Footer />
