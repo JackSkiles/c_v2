@@ -3,7 +3,7 @@ import './home.css';
 import Carousel from 'react-bootstrap/Carousel';
 import Map from './Map'
 import Footer from './Footer'
-
+import { Link } from 'react-router-dom';
 
 export default function Home() {
     return (
@@ -13,8 +13,7 @@ export default function Home() {
                     <Carousel.Item className="cIItem">
                         <img className="d-block w-100" id="img" src='../church.jpg' alt="First slide"></img>
                         <Carousel.Caption>
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <Link to="/beliefs" className="link"><h1>Our Distinctions</h1></Link>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item className="cIItem">
@@ -25,8 +24,7 @@ export default function Home() {
                             alt="Third slide" 
                         />
                         <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <Link to="/history" className="link"><h1>Our History</h1></Link>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item className="cIItem">
@@ -37,8 +35,7 @@ export default function Home() {
                             alt="Third slide"
                         />
                         <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <Link to="/faq" className="link"><h1>Frequently Asked Questions</h1></Link>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
