@@ -17,6 +17,9 @@
 .show {
 
 }
+.carouselItem {
+    color: white;
+}
 .question {
     border: none;
     background-color: white;

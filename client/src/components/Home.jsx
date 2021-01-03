@@ -11,31 +11,31 @@ export default function Home() {
             <div className="carousel">
                 <Carousel>
                     <Carousel.Item className="cIItem">
-                        <img className="d-block w-100" id="img" src='../church.jpg' alt="First slide"></img>
+                        <img className="d-block w-100" id="img" src='../front.jpg' alt="First slide"></img>
                         <Carousel.Caption>
-                            <Link to="/beliefs" className="link"><h1>Our Distinctions</h1></Link>
+                            <Link to="/beliefs" ><h2 className="carouselItem">Our Distinctions</h2></Link>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item className="cIItem">
                         <img
                             className="d-block w-100"
                             id="img"
-                            src="../church2.jpg"
+                            src="../image_50428673.jpg"
                             alt="Third slide" 
                         />
                         <Carousel.Caption>
-                            <Link to="/history" className="link"><h1>Our History</h1></Link>
+                            <Link to="/history" className="carouselItem"><h2>Our History</h2></Link>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item className="cIItem">
                         <img
                             className="d-block w-100"
                             id="img"
-                            src="../church4.jpg"
+                            src="../sign.jpg"
                             alt="Third slide"
                         />
                         <Carousel.Caption>
-                        <Link to="/faq" className="link"><h1>Frequently Asked Questions</h1></Link>
+                        <Link to="/faq" className="carouselItem"><h2>Frequently Asked Questions</h2></Link>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
