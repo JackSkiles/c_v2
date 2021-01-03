@@ -31,7 +31,7 @@ export default class Faq extends Component {
         return (
             <div className="main">
                 <div className="imgCont">
-                    <img className="topImg" src="bible.jpg"></img>
+                    <img className="topImg" src="hymnal.jpg"></img>
                 </div>
                 <div className="mainCont">
                     <h2>Frequently Asked Questions:</h2>
