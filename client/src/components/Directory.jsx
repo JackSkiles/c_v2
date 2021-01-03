@@ -62,9 +62,9 @@ export default class App extends Component {
                 <div>
                     <Link to="/sermons"><h2>Sermons</h2></Link>
                 </div>
-                <div>
+                {/* <div>
                     <Giving />
-                </div>
+                </div> */}
                 <Footer />
             </div>
         )
