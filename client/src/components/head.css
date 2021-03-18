@@ -1,14 +1,22 @@
 
 .contain {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+}
+.contain2 {
+    width: 75%;
     background: rgb(27, 27, 27);
+    display: flex;
+    justify-content: space-between;
     height: 12vh;
     font-family: 22px scheme;
     text-transform: uppercase;
     color: #fff8f0;
 }
-
+.contact {
+    height: 7vh;
+    text-align: center;
+}
 .titles {
     display: flex;
     align-items: center;
@@ -72,7 +80,7 @@
 }
 
 .text {
-    font-size: 2.75vh;
+    font-size: 2vh;
     text-decoration: none;
 }
 .text2 {

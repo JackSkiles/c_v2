@@ -44,6 +44,8 @@ export default function Header() {
 
     return (
         <div className="contain">
+            <div className="contain2">
+
             <div className="titles"><Link to="/" className="link1"><h1 className="header">Chattanooga Primitive Baptist Church</h1></Link></div>
             <div className="links">
                 <Link to="/" className="link"><h3 className="text">Home</h3></Link>
@@ -116,9 +118,10 @@ export default function Header() {
                             </Dropdown.Menu>
                         </Dropdown>
                         <Dropdown.Divider />
-                        <Dropdown.Item><Link to="/contact" className="link"><Button className="contact" variant="light"><h3 className="contactText">Contact Us</h3></Button></Link></Dropdown.Item>
+                        <Dropdown.Item><Link to="/contact" className="link"><Button className="contact" variant="light"><h4>Contact Us</h4></Button></Link></Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
+            </div>
             </div>
         </div>
     )
