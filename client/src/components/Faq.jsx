@@ -30,6 +30,7 @@ export default class Faq extends Component {
     render() {
         return (
             <div className="main">
+            <div className="mainContainer">
                 <div className="imgCont">
                     <img className="topImg" src="hymnal.jpg"></img>
                 </div>
@@ -170,6 +171,7 @@ export default class Faq extends Component {
                             For by grace are ye saved through faith; and that not of yourselves: it is the gift of God: Not of works, lest any man should boast.</p>
                         <p>— Ephesians 2:8-9</p>
                     </div>
+                </div>
                 </div>
             </div>
         )

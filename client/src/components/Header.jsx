@@ -118,7 +118,7 @@ export default function Header() {
                             </Dropdown.Menu>
                         </Dropdown>
                         <Dropdown.Divider />
-                        <Dropdown.Item><Link to="/contact" className="link"><Button className="contact" variant="light"><h4>Contact Us</h4></Button></Link></Dropdown.Item>
+                        <Dropdown.Item><Link to="/contact" className="link"><Button className="contact" variant="light"><h6>Contact Us</h6></Button></Link></Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
             </div>

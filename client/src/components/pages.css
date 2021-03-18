@@ -1,6 +1,10 @@
 .imgCont {
-    height: 30vh;
+    height: 70vh;
     overflow: hidden;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 .topImg {
@@ -62,18 +66,22 @@
     width: 30%;
     font-size: 3vh;
 }
-.theMap{ 
-    margin: 7vh 0 7vh 0;
-    width: 60%; 
-    height: 55vh;
-} 
 
-@media screen and (max-width: 980px){
+.theMap {
+    margin: 7vh 0 7vh 0;
+    width: 60%;
+    height: 55vh;
+}
+
+@media screen and (max-width: 980px) {
     .textCont, .textCont2, .contact-form {
         width: 95%;
     }
     .theMap {
         height: 45vh;
         width: 80%;
+    }
+    .imgCont {
+        height: 35vh;
     }
 }
