@@ -7,13 +7,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 75%;
+    width: 70%;
 }
 
 
 .cIItem {
     display: flex;
-    height: 70vh;
+    height: 80vh;
     width: 100%;
     align-items: center;
     overflow: hidden;

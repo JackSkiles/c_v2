@@ -4,7 +4,7 @@
     justify-content: center;
 }
 .contain2 {
-    width: 75%;
+    width: 70%;
     background: rgb(27, 27, 27);
     display: flex;
     justify-content: space-between;
@@ -145,8 +145,11 @@
         align-items: center;
         width: 30%;
     }
+    .contain2 {
+        width: 100%;
+    }
     .header {
-        font-size: 2.5vh;
+        font-size: 2vh;
     }
     .links {
         display: none;
