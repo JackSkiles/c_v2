@@ -1,5 +1,5 @@
 .main {
-    position: relative;
+    display: flex;
 }
 
 .cIItem {
@@ -62,8 +62,6 @@
     width: 60%;
     padding-top: 3vh;
 }
-
-
 @media screen and (max-width: 980px){
     .homeText {
         font-size: 1.5rem;
@@ -77,5 +75,15 @@
     }
     .cIItem {
         height: 40vh;
+    }
+}
+
+@media screen and (max-height: 400px){
+    .cIItem {
+        height: 90vh;
+        overflow: show;
+    }
+    #img {
+        height: 90vh;
     }
 }

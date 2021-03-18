@@ -42,7 +42,6 @@ export default function LoginAdmin() {
                 </Form>
             </div>
             )}
-            <Footer />
         </div>
     )
 }

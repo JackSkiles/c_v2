@@ -171,7 +171,6 @@ export default class Faq extends Component {
                         <p>— Ephesians 2:8-9</p>
                     </div>
                 </div>
-                <Footer />
             </div>
         )
     }

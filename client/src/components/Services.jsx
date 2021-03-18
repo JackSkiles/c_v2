@@ -36,7 +36,6 @@ export default function Services() {
                            And don't worry if they wriggle or squawk - they'll fit right in.</p>
                 </div>
             </div>
-            <Footer />
         </div>
 
     )

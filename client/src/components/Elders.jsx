@@ -28,7 +28,6 @@ export default function Elders() {
                     <h3>Joe Hildreth</h3>
                 </div> 
             </div>
-            <Footer />
         </div>
     )
 }

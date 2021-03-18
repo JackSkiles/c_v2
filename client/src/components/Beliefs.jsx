@@ -32,7 +32,6 @@ export default function Beliefs() {
                     <p>— Ephesians 2:8-9</p>
                 </div>
             </div>
-            <Footer />
         </div>
 
     )

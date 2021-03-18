@@ -15,6 +15,7 @@ import Beliefs from './components/Beliefs';
 import History from './components/History';
 import Elders from './components/Elders';
 import Faq from './components/Faq';
+import Footer from './components/Footer'
 
 class App extends Component {
   constructor(props) {
@@ -52,6 +53,7 @@ class App extends Component {
             <Route path="/contact" exact component={Contact} />
           </Switch>
         </Router>
+        <Footer />
       </div>
     )
   }

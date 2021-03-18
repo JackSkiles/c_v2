@@ -41,7 +41,6 @@ export default function LogIn() {
                 </Form>
             </div>
             )}
-            <Footer />
         </div>
     )
 }

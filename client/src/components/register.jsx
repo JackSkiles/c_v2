@@ -52,7 +52,6 @@ export default class register extends Component {
                 <p className="forgot-password text-right" style={{ padding: '20px'}}>
                 </p>
                 {/* end of registration form */}
-                <Footer />
             </div >
         );
     }
