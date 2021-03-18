@@ -39,32 +39,35 @@ export default class App extends Component {
 
     render() {
         const columns = [
-            {dataField: "firstName", text: 'First Name'},
-            {dataField: "lastName", text: 'Last Name'},
-            {dataField: "phone", text: 'Phone Number'},
-            {dataField: "email", text: 'Email'},
-            {dataField: "address", text: 'Home Address'}
+            { dataField: "firstName", text: 'First Name' },
+            { dataField: "lastName", text: 'Last Name' },
+            { dataField: "phone", text: 'Phone Number' },
+            { dataField: "email", text: 'Email' },
+            { dataField: "address", text: 'Home Address' }
         ]
         return (
-            <div className="mainDiv2">
-                {this.state.redirect ? <Redirect to='/login' /> : null}
-                <div className="tables">
-                    <BootstrapTable 
-                        keyField="name"
-                        data={this.state.directory}
-                        columns={columns}
-                        pagination={paginationFactory()}
+            <div className="main">
+                <div className="mainContainer">
+
+                    {this.state.redirect ? <Redirect to='/login' /> : null}
+                    <div className="tables">
+                        <BootstrapTable
+                            keyField="name"
+                            data={this.state.directory}
+                            columns={columns}
+                            pagination={paginationFactory()}
                         />
-                </div>
-                <div>
-                    <GroupMe />
-                </div>
-                <div>
-                    <Link to="/sermons"><h2>Sermons</h2></Link>
-                </div>
-                {/* <div>
+                    </div>
+                    <div>
+                        <GroupMe />
+                    </div>
+                    <div>
+                        <Link to="/sermons"><h2>Sermons</h2></Link>
+                    </div>
+                    {/* <div>
                     <Giving />
                 </div> */}
+                </div>
             </div>
         )
     }

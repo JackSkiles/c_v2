@@ -59,25 +59,25 @@ export default class Sermons extends Component {
         }
         return (
             <div className="mainDiv2">
-                <h2>Sermon List</h2>
-                {this.state.redirect ? <Redirect to='/login' /> : null}
-                <div className="tables">
-                    <BootstrapTable
-                        keyField="name"
-                        data={this.state.sermons}
-                        columns={columns}
-                        pagination={paginationFactory()}
-                        rowEvents={rowEvents}
-                    />
-                </div>
-                <div>
-                    <GroupMe />
-                </div>
-                <div>
-                    <Link to="/directory"><h2>Directory</h2></Link>
-                </div>
-                <div className="mapDiv">
-                <iframe width="720" height="800" src="https://boxcast.tv/view-embed/iokwewrkiuci9lnzticy?showTitle=1&showDescription=1&showHighlights=1&showRelated=1&defaultVideo=next&market=house-of-worship&showDocuments=1&showIndex=1&showDonations=0&layout=playlist-to-right" frameBorder="0" scrolling="auto" allowfullscreen="true" allow="autoplay; fullscreen"></iframe>
+                <div className="mainContainer">
+
+                    <h2>Sermon List</h2>
+                    {this.state.redirect ? <Redirect to='/login' /> : null}
+                    <div className="tables">
+                        <BootstrapTable
+                            keyField="name"
+                            data={this.state.sermons}
+                            columns={columns}
+                            pagination={paginationFactory()}
+                            rowEvents={rowEvents}
+                        />
+                    </div>
+                    <div>
+                        <GroupMe />
+                    </div>
+                    <div>
+                        <Link to="/directory"><h2>Directory</h2></Link>
+                    </div>
                 </div>
             </div>
         )
