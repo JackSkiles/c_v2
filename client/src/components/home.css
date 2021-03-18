@@ -11,11 +11,19 @@
     box-shadow: 0px 10px 15px 1px grey;
 }
 
-
+.carousel-caption {
+    display: flex;
+    justify-content: center;
+    top: 60%;
+    transform: translateY(-50%);
+    color: black;
+}
 .cIItem {
     display: flex;
     height: 80vh;
     width: 100%;
+    align-items: center;
+    justify-content: center;
     align-items: center;
     overflow: hidden;
 }
@@ -28,7 +36,13 @@
 
 }
 .carouselItem {
+    text-align: center;
+    width: 100%;
     color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: rgba(102, 102, 102, 0.6);
 }
 .question {
     border: none;
@@ -88,6 +102,13 @@
     }
     .mainContainer {
         width: 100%;
+    }
+    .carousel-caption {
+        display: flex;
+        justify-content: center;
+        top: 55%;
+        transform: translateY(-50%);
+        color: black;
     }
 }
 

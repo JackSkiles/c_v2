@@ -25,7 +25,7 @@ export default function Home() {
                                 alt="Third slide"
                             />
                             <Carousel.Caption>
-                                <Link to="/history" className="carouselItem"><h2>Our History</h2></Link>
+                                <Link to="/history"><h2 className="carouselItem">Our History</h2></Link>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item className="cIItem">
@@ -36,7 +36,7 @@ export default function Home() {
                                 alt="Third slide"
                             />
                             <Carousel.Caption>
-                                <Link to="/faq" className="carouselItem"><h2>Frequently Asked Questions</h2></Link>
+                                <Link to="/faq"><h2 className="carouselItem">Frequently Asked Questions</h2></Link>
                             </Carousel.Caption>
                         </Carousel.Item>
                     </Carousel>
