@@ -112,7 +112,25 @@
     font-size: 100%;
 }
 
-@media screen and (max-width: 1250px){
+@media screen and (max-width: 1600px){
+  
+    .header {
+        font-size: 2.5vh;
+    }
+    .text {
+        font-size: 1.5vh;
+    }
+    .text:hover {
+        font-size: 2vh;
+    }    
+    .contact {
+        width: 100%;
+    }
+    .contact2 {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 1200px){
     .drop {
         display: flex;
         justify-content: center;

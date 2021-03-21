@@ -49,6 +49,7 @@ export default class Sermons extends Component {
     }
     render() {
         const columns = [
+            { dataField: "id", text: 'sermon id' },
             { dataField: "elder", text: 'Elder' },
             { dataField: "createdAt", text: 'Date' }
         ]

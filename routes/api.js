@@ -127,6 +127,35 @@ router.post('/directory', (req, res) => {
     })
     .then(data => res.json(data));
 })
+router.delete('/directory/delete', (req, res) => {
+    const { firstName, lastName } = req.body
+    db.Directory.destroy({
+        where: {
+            firstName: firstName,
+            lastName: lastName
+        }
+    })
+    .then((Directory) => {
+        res.json("success");
+    })
+    .catch((err) => {
+        res.json({ error: 'Could not delete contact' });
+    });
+})
+router.delete('/sermons/delete', (req, res) => {
+    db.Sermon.destroy({
+        where: {
+            id: parseInt(req.body.id)
+        }
+    })
+    .then((Directory) => {
+        res.json("success");
+    })
+    .catch((err) => {
+        res.json({ error: 'Could not delete contact' });
+    });
+})
+
 
 
 module.exports = router;

@@ -14,7 +14,7 @@ export default function Home() {
                         <Carousel.Item className="cIItem">
                             <img className="d-block w-100" id="img" src='../front.jpg' alt="First slide"></img>
                             <Carousel.Caption>
-                                <Link to="/beliefs" ><h2 className="carouselItem">Our Distinctions</h2></Link>
+                                <Link to="/beliefs" ><h1 className="carouselItem">Our Distinctions</h1></Link>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item className="cIItem">
@@ -25,7 +25,7 @@ export default function Home() {
                                 alt="Third slide"
                             />
                             <Carousel.Caption>
-                                <Link to="/history"><h2 className="carouselItem">Our History</h2></Link>
+                                <Link to="/history"><h1 className="carouselItem">Our History</h1></Link>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item className="cIItem">
@@ -36,7 +36,7 @@ export default function Home() {
                                 alt="Third slide"
                             />
                             <Carousel.Caption>
-                                <Link to="/faq"><h2 className="carouselItem">Frequently Asked Questions</h2></Link>
+                                <Link to="/faq"><h1 className="carouselItem">Frequently Asked Questions</h1></Link>
                             </Carousel.Caption>
                         </Carousel.Item>
                     </Carousel>

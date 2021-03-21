@@ -86,14 +86,14 @@ export default function Header() {
                         </Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
-                <Link Link to="/contact" className="link"><Button className="contact" variant="light"><h3>Contact Us</h3></Button></Link>
+                <Link Link to="/contact" className="link"><Button className="contact" variant="light"><h3 className="contact2">Contact Us</h3></Button></Link>
             </div>
             <div className="drop">
                 <Dropdown >
                     <Dropdown.Toggle variant="secondary" id="dropdown-basic" >MENU
                     </Dropdown.Toggle>
                     <Dropdown.Menu className="dropMenu">
-                        <Dropdown.Item><Link to="/services" className="link"><h3 className="text">Services</h3></Link></Dropdown.Item>
+                        <Dropdown.Item><Link to="/services" className="link2"><h3 className="text">Services</h3></Link></Dropdown.Item>
                         <Dropdown className="link">
                             <Dropdown.Toggle as={CustomToggle2} id="dropdown-custom-components" ><h3 className="text">About Us</h3>
                             </Dropdown.Toggle>

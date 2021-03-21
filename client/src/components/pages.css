@@ -24,6 +24,10 @@
     width: 40%;
     padding: 3vh;
 }
+.textCont3 {
+    width: 100%;
+    padding: 3vh;
+}
 
 .textCont2 {
     display: flex;
