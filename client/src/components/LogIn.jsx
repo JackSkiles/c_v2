@@ -4,6 +4,7 @@ import { Redirect, withRouter } from 'react-router-dom'
 import axios from 'axios'
 import Footer from './Footer'
 import { Form, Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 
 export default function LogIn() {
     const [password, setPassword] = useState('')
@@ -37,6 +38,7 @@ export default function LogIn() {
                     </div>
                     <div className="button">
                         <Button variant="info" type="submit">Log In</Button>
+                        <Link to="/admin" className="link"><h3 className="text">Admin</h3></Link>
                     </div>
                 </Form>
             </div>
