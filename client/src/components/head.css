@@ -89,7 +89,8 @@
 }
 
 .text:hover {
-    font-size: 3.25vh;
+    color: #9b9999;
+    transition: .3s;
 }
 
 .drop {
@@ -120,9 +121,9 @@
     .text {
         font-size: 1.5vh;
     }
-    .text:hover {
+    /* .text:hover {
         font-size: 2vh;
-    }    
+    }     */
     .contact {
         width: 100%;
     }

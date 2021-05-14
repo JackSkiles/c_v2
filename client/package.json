@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "homepage": "http://church.standardstamp.com",
+  "homepage": "http://skilespiano.com",
   "private": true,
   "dependencies": {
     "@fullcalendar/core": "^5.3.1",

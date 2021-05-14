@@ -38,8 +38,9 @@ export default function LogIn() {
                     </div>
                     <div className="button">
                         <Button variant="info" type="submit">Log In</Button>
-                        <Link to="/admin" className="link"><h3 className="text">Admin</h3></Link>
                     </div>
+                        {/* <Link to="/admin" className="link"><h3 className="text">A</h3>
+                    </Link> */}
                 </Form>
             </div>
             )}

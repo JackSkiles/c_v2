@@ -28,6 +28,12 @@
     align-items: center;
     overflow: hidden;
 }
+/* .cIItem.active.carousel-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+} */
 
 #img {
     height: 80vh;
@@ -110,6 +116,9 @@
         top: 55%;
         transform: translateY(-50%);
         color: black;
+    }
+    .carouselItem{
+        font-size: 20px;
     }
 }
 
