@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 
 export default function Home() {
     return (
-        <div className="main">
-            <div className="mainContainer">
+        <div className="main" >
+            <div className="mainContainer" >
                 <div className="carousel">
                     <Carousel>
                         <Carousel.Item className="cIItem">
@@ -22,7 +22,7 @@ export default function Home() {
                                 className="d-block w-100"
                                 id="img"
                                 src="../image_50428673.jpg"
-                                alt="Third slide"
+                                alt="Second slide"
                             />
                             <Carousel.Caption>
                                 <Link to="/history"><h1 className="carouselItem">Our History</h1></Link>
@@ -41,7 +41,7 @@ export default function Home() {
                         </Carousel.Item>
                     </Carousel>
                 </div>
-                <div className="mapDiv">
+                <div className="mapDiv" alt="Google Maps">
                     <div className="homeText">
                         <h1>Services on Sunday</h1>
                         <h4>10:30 A.M.</h4>
