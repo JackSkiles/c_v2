@@ -21,7 +21,7 @@
 }
 
 .textCont {
-    width: 40%;
+    width: 60%;
     padding: 3vh;
 }
 .textCont3 {
@@ -35,7 +35,7 @@
     text-align: start;
     flex-wrap: wrap;
     padding: 3vh;
-    width: 40%;
+    width: 60%;
     padding-top: 3vh;
 }
 
