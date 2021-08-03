@@ -1,5 +1,7 @@
 {
-  "name": "c_v2",
+  "name": "chattanoogapbc",
+  "password": "Never2easy!cbc",
+  "homepage": "https://chattanoogapbc.org/",
   "version": "0.0.0",
   "private": true,
   "dependencies": {
