@@ -41,9 +41,11 @@ export default function Contact() {
             <h3>Email Us</h3>
             <Form.Control type="hidden" name="contact_number" />
             <Form.Label className="formText">Name:</Form.Label>
-            <Form.Control type="text" name="user_name" />
+            <Form.Control type="text" name="name" />
             <Form.Label className="formText" >Email:</Form.Label>
-            <Form.Control type="email" name="user_email" />
+            <Form.Control type="email" name="email" />
+            <Form.Label className="formText" >Subject:</Form.Label>
+            <Form.Control type="text" name="subject" />
             <Form.Label className="formText" >Message:</Form.Label>
             <Form.Control className="contact-control" as="textarea" name="message" />
             <Button variant="info" className="formText" id="button" type="submit" value="Send">Send</Button>

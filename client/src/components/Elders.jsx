@@ -24,12 +24,12 @@ export default function Elders() {
                     </div> */}
                     </div>
                 </div>
-                <div className="mainCont3">
+                {/* <div className="mainCont3">
                     <div className="textCont">
                         <h2>Previous Elders:</h2>
                         <h3>Joe Hildreth</h3>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )
